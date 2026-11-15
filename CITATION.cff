@@ -9,8 +9,16 @@ authors:
   - name: Toast Creations LLC
     website: https://toastcreations.info/
 repository-code: https://github.com/Toast-Creations/DREAM
+doi: 10.5281/zenodo.24261209
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24261209
+    description: Concept DOI (all versions, resolves to the latest)
+  - type: doi
+    value: 10.5281/zenodo.24261210
+    description: Version 2.0.1
 license: Apache-2.0
-version: 2.0.0
+version: 2.0.1
 date-released: '2026-11-15'
 keywords:
   - activation steering

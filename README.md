@@ -1,5 +1,7 @@
 # DREAM
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24261209.svg)](https://doi.org/10.5281/zenodo.24261209) [![tests](https://github.com/Toast-Creations/DREAM/actions/workflows/tests.yml/badge.svg)](https://github.com/Toast-Creations/DREAM/actions/workflows/tests.yml)
+
 DREAM is an independent research project. It runs controlled, pre-specified experiments on open-weight language models (mostly Qwen3-8B and Qwen3-32B) on a single 24 GB GPU. Everything is published here: the code, the frozen study plans, the reports and the errata, including the experiments that failed.
 
 Maintained by **Toast Creations LLC**. Research lead: **David Cook**.
@@ -49,7 +51,9 @@ Running real studies needs local model weights with a verified manifest. See [do
 
 ## How to cite
 
-See [CITATION.cff](CITATION.cff). Please cite the exact version or commit you used.
+Cook, D. (2026). *DREAM: pre-specified experiments on activation steering, reversible learning and temporal state tracking in open-weight language models.* Toast Creations LLC. https://doi.org/10.5281/zenodo.24261209
+
+That DOI always points to the latest version. Each release also has its own DOI, listed on its [Zenodo record](https://doi.org/10.5281/zenodo.24261209); v2.0.1 is [10.5281/zenodo.24261210](https://doi.org/10.5281/zenodo.24261210). Please cite the version you used. Machine-readable metadata is in [CITATION.cff](CITATION.cff).
 
 ## AI assistance
 

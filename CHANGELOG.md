@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1 (15 November 2026)
+
+- Archived on Zenodo: DOI [10.5281/zenodo.24261210](https://doi.org/10.5281/zenodo.24261210) (all versions: [10.5281/zenodo.24261209](https://doi.org/10.5281/zenodo.24261209)). Added `.zenodo.json`. No code, data or results changed.
+
 ## 2.0.0 (15 November 2026): first public release
 
 - One public package that folds together all private research versions 1.0–1.29 (27 October to 14 November 2026). The code in `src/` and `scripts/` is the 1.29.0 source. The only changes are that local absolute paths were moved into `src/dream_core/localpaths.py` (environment variables), and tests that need archived versions or saved run folders now skip when those are absent.
