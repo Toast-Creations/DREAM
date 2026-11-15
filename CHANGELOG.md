@@ -2,6 +2,8 @@
 
 ## 2.0.2 (15 November 2026)
 
+Zenodo DOI [10.5281/zenodo.24264554](https://doi.org/10.5281/zenodo.24264554).
+
 - **Python 3.10 support.** Several runners write timestamps with a colon-less UTC offset (`-0500`), which Python 3.10's `datetime.fromisoformat` rejects. That made 49 driver and certification tests fail on 3.10. New `src/dream_core/isotime.py` parses those timestamps the same way on 3.10 and 3.11+ (on 3.11+ it *is* `datetime.fromisoformat`), and it is now used in `scripts/cc_analyze.py` and `scripts/su_certify.py`. New tests: `tests/test_isotime.py`. CI now covers 3.10–3.13.
 - Documented the `procps` requirement, and the need for `--init` when running the tests in a container.
 

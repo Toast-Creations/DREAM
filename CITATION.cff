@@ -15,6 +15,9 @@ identifiers:
     value: 10.5281/zenodo.24261209
     description: Concept DOI (all versions, resolves to the latest)
   - type: doi
+    value: 10.5281/zenodo.24264554
+    description: Version 2.0.2
+  - type: doi
     value: 10.5281/zenodo.24261210
     description: Version 2.0.1
 license: Apache-2.0

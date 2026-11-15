@@ -53,7 +53,7 @@ Running real studies needs local model weights with a verified manifest. See [do
 
 Cook, D. (2026). *DREAM: pre-specified experiments on activation steering, reversible learning and temporal state tracking in open-weight language models.* Toast Creations LLC. https://doi.org/10.5281/zenodo.24261209
 
-That DOI always points to the latest version. Each release also has its own DOI, listed on its [Zenodo record](https://doi.org/10.5281/zenodo.24261209); v2.0.1 is [10.5281/zenodo.24261210](https://doi.org/10.5281/zenodo.24261210). Please cite the version you used. Machine-readable metadata is in [CITATION.cff](CITATION.cff).
+That DOI always points to the latest version. Each release also has its own DOI, listed on its [Zenodo record](https://doi.org/10.5281/zenodo.24261209); the latest, v2.0.2, is [10.5281/zenodo.24264554](https://doi.org/10.5281/zenodo.24264554). Please cite the version you used. Machine-readable metadata is in [CITATION.cff](CITATION.cff).
 
 ## AI assistance
 
