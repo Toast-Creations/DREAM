@@ -1,0 +1,11 @@
+{
+  "title": "DREAM: pre-specified experiments on activation steering, reversible learning and temporal state tracking in open-weight language models",
+  "upload_type": "software",
+  "description": "Code, frozen study plans, reports and errata from the DREAM independent research project, including negative results. Maintained by Toast Creations LLC. See the repository README and docs/studies.md.",
+  "creators": [
+    {"name": "Cook, David", "affiliation": "Toast Creations LLC"}
+  ],
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "keywords": ["activation steering", "language models", "negative results", "LoRA", "state tracking", "information extraction", "pre-registration", "reproducibility"]
+}
