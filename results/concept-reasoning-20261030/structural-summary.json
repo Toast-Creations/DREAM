@@ -1,0 +1,20 @@
+{
+  "status": "exploratory; semantic ratings pending",
+  "cells": {
+    "ordinary/lambda=0.0/reasoning=True": {
+      "responses": 6,
+      "completed_five_item_answers": 6,
+      "output_tokens": 5487,
+      "length_stops": 0
+    },
+    "ordinary/lambda=0.0/reasoning=False": {
+      "responses": 6,
+      "completed_five_item_answers": 6,
+      "output_tokens": 888,
+      "length_stops": 0
+    }
+  },
+  "analysis_unit": "concept, with seeds and five items nested within concept",
+  "primary_contrast": "reasoning on minus off, ordinary zero-steering only; relevance-gated association quality 0 to 10",
+  "quality_claim": "No semantic or creativity result follows from schema validity."
+}

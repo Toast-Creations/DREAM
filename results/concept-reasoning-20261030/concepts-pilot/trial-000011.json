@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "task_id": "development-concept-04",
+  "concept": "reciprocity",
+  "definition": "An action or exchange is answered by a corresponding action or exchange between participants.",
+  "seed": 11,
+  "condition": "ordinary",
+  "lambda": 0.0,
+  "reasoning_enabled": false,
+  "temperature": 0.6,
+  "output": {
+    "text": "{\"associations\": [{\"item\": \"gift-giving in cultures\", \"connection\": \"A gift is reciprocated with another gift, reinforcing social bonds.\"}, {\"item\": \"online reviews\", \"connection\": \"A positive review often leads to a positive response from the business, creating a cycle of mutual benefit.\"}, {\"item\": \"mutual aid networks\", \"connection\": \"Members support each other during crises, expecting the same support in return during future needs.\"}, {\"item\": \"language learning exchanges\", \"connection\": \"Speakers of different languages teach each other, expecting reciprocal knowledge sharing.\"}, {\"item\": \"legal contracts\", \"connection\": \"Each party fulfills their obligations, expecting the other to do the same in return.\"}]}",
+    "raw_text": "{\"associations\": [{\"item\": \"gift-giving in cultures\", \"connection\": \"A gift is reciprocated with another gift, reinforcing social bonds.\"}, {\"item\": \"online reviews\", \"connection\": \"A positive review often leads to a positive response from the business, creating a cycle of mutual benefit.\"}, {\"item\": \"mutual aid networks\", \"connection\": \"Members support each other during crises, expecting the same support in return during future needs.\"}, {\"item\": \"language learning exchanges\", \"connection\": \"Speakers of different languages teach each other, expecting reciprocal knowledge sharing.\"}, {\"item\": \"legal contracts\", \"connection\": \"Each party fulfills their obligations, expecting the other to do the same in return.\"}]}",
+    "ended_with_eos": true,
+    "finish_reason": "eos",
+    "input_tokens": 157,
+    "output_tokens": 154
+  },
+  "structure": {
+    "valid": true,
+    "associations": [
+      {
+        "item": "gift-giving in cultures",
+        "connection": "A gift is reciprocated with another gift, reinforcing social bonds."
+      },
+      {
+        "item": "online reviews",
+        "connection": "A positive review often leads to a positive response from the business, creating a cycle of mutual benefit."
+      },
+      {
+        "item": "mutual aid networks",
+        "connection": "Members support each other during crises, expecting the same support in return during future needs."
+      },
+      {
+        "item": "language learning exchanges",
+        "connection": "Speakers of different languages teach each other, expecting reciprocal knowledge sharing."
+      },
+      {
+        "item": "legal contracts",
+        "connection": "Each party fulfills their obligations, expecting the other to do the same in return."
+      }
+    ],
+    "format_error": null,
+    "semantic_quality": "pending blinded review"
+  },
+  "completed_five_item_answer": true,
+  "steering_trace": [],
+  "ratings": null
+}

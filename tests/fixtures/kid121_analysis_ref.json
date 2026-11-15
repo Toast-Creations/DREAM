@@ -1,0 +1,348 @@
+{
+ "source": "1.21 analysis/kid/ANALYSIS.json sha 74bba5477cd33c55284959d73c4ad279df644e75309fc5d3279b97d2656744c1",
+ "ref": {
+  "MAIN": {
+   "arrival": {
+    "KEEP-SUB": {
+     "difference": 0.2031,
+     "ci95": [
+      0.0625,
+      0.3438
+     ],
+     "paired_targets": {
+      "SUB only": 2,
+      "both": 43,
+      "KEEP only": 15,
+      "neither": 4
+     },
+     "paired_history_units_both_exact": {
+      "SUB only": 1,
+      "KEEP only": 9,
+      "both": 19,
+      "neither": 3
+     }
+    },
+    "KEEP-BASE": {
+     "difference": 0.1562,
+     "ci95": [
+      0.0781,
+      0.2344
+     ],
+     "paired_targets": {
+      "BASE only": 1,
+      "both": 47,
+      "KEEP only": 11,
+      "neither": 5
+     },
+     "paired_history_units_both_exact": {
+      "BASE only": 1,
+      "both": 18,
+      "KEEP only": 10,
+      "neither": 3
+     }
+    },
+    "SUB-BASE": {
+     "difference": -0.0469,
+     "ci95": [
+      -0.2344,
+      0.125
+     ],
+     "paired_targets": {
+      "both": 33,
+      "BASE only": 15,
+      "SUB only": 12,
+      "neither": 4
+     },
+     "paired_history_units_both_exact": {
+      "both": 10,
+      "BASE only": 9,
+      "SUB only": 10,
+      "neither": 3
+     }
+    }
+   },
+   "correction": {
+    "KEEP-SUB": {
+     "difference": -0.0469,
+     "ci95": [
+      -0.1094,
+      0.0156
+     ],
+     "paired_targets": {
+      "both": 58,
+      "SUB only": 4,
+      "KEEP only": 1,
+      "neither": 1
+     },
+     "paired_history_units_both_exact": {
+      "both": 26,
+      "SUB only": 4,
+      "KEEP only": 1,
+      "neither": 1
+     }
+    },
+    "KEEP-BASE": {
+     "difference": -0.0312,
+     "ci95": [
+      -0.0938,
+      0.0312
+     ],
+     "paired_targets": {
+      "both": 57,
+      "neither": 1,
+      "BASE only": 4,
+      "KEEP only": 2
+     },
+     "paired_history_units_both_exact": {
+      "both": 25,
+      "neither": 1,
+      "BASE only": 4,
+      "KEEP only": 2
+     }
+    },
+    "SUB-BASE": {
+     "difference": 0.0156,
+     "ci95": [
+      -0.0469,
+      0.0781
+     ],
+     "paired_targets": {
+      "both": 59,
+      "SUB only": 3,
+      "BASE only": 2
+     },
+     "paired_history_units_both_exact": {
+      "both": 27,
+      "SUB only": 3,
+      "BASE only": 2
+     }
+    }
+   },
+   "both_acts": {
+    "KEEP-SUB": {
+     "difference": 0.0781,
+     "ci95": [
+      0.0078,
+      0.1484
+     ],
+     "paired_targets": {
+      "SUB only": 6,
+      "both": 101,
+      "KEEP only": 16,
+      "neither": 5
+     },
+     "paired_history_units_both_exact": {
+      "SUB only": 5,
+      "both": 45,
+      "KEEP only": 10,
+      "neither": 4
+     }
+    },
+    "KEEP-BASE": {
+     "difference": 0.0625,
+     "ci95": [
+      0.0078,
+      0.1172
+     ],
+     "paired_targets": {
+      "BASE only": 5,
+      "both": 104,
+      "neither": 6,
+      "KEEP only": 13
+     },
+     "paired_history_units_both_exact": {
+      "BASE only": 5,
+      "both": 43,
+      "neither": 4,
+      "KEEP only": 12
+     }
+    },
+    "SUB-BASE": {
+     "difference": -0.0156,
+     "ci95": [
+      -0.1094,
+      0.0703
+     ],
+     "paired_targets": {
+      "both": 92,
+      "BASE only": 17,
+      "SUB only": 15,
+      "neither": 4
+     },
+     "paired_history_units_both_exact": {
+      "both": 37,
+      "BASE only": 11,
+      "SUB only": 13,
+      "neither": 3
+     }
+    }
+   }
+  },
+  "F4": {
+   "arrival": {
+    "KEEP-SUB": {
+     "difference": 0.0938,
+     "ci95": [
+      0,
+      0.25
+     ],
+     "paired_targets": {
+      "KEEP only": 3,
+      "both": 21,
+      "neither": 8
+     },
+     "paired_history_units_both_exact": {
+      "KEEP only": 2,
+      "both": 10,
+      "neither": 4
+     }
+    },
+    "KEEP-BASE": {
+     "difference": 0.5,
+     "ci95": [
+      0.2812,
+      0.7188
+     ],
+     "paired_targets": {
+      "KEEP only": 17,
+      "neither": 7,
+      "both": 7,
+      "BASE only": 1
+     },
+     "paired_history_units_both_exact": {
+      "KEEP only": 12,
+      "neither": 4
+     }
+    },
+    "SUB-BASE": {
+     "difference": 0.4062,
+     "ci95": [
+      0.2188,
+      0.5938
+     ],
+     "paired_targets": {
+      "neither": 10,
+      "SUB only": 14,
+      "both": 7,
+      "BASE only": 1
+     },
+     "paired_history_units_both_exact": {
+      "neither": 6,
+      "SUB only": 10
+     }
+    }
+   },
+   "correction": {
+    "KEEP-SUB": {
+     "difference": 0.0312,
+     "ci95": [
+      0,
+      0.0938
+     ],
+     "paired_targets": {
+      "both": 29,
+      "KEEP only": 2,
+      "SUB only": 1
+     },
+     "paired_history_units_both_exact": {
+      "both": 14,
+      "KEEP only": 1,
+      "neither": 1
+     }
+    },
+    "KEEP-BASE": {
+     "difference": 0.0938,
+     "ci95": [
+      -0.0312,
+      0.2188
+     ],
+     "paired_targets": {
+      "both": 27,
+      "KEEP only": 4,
+      "BASE only": 1
+     },
+     "paired_history_units_both_exact": {
+      "both": 11,
+      "KEEP only": 4,
+      "BASE only": 1
+     }
+    },
+    "SUB-BASE": {
+     "difference": 0.0625,
+     "ci95": [
+      -0.0938,
+      0.2188
+     ],
+     "paired_targets": {
+      "both": 26,
+      "BASE only": 2,
+      "SUB only": 4
+     },
+     "paired_history_units_both_exact": {
+      "both": 10,
+      "BASE only": 2,
+      "SUB only": 4
+     }
+    }
+   },
+   "both_acts": {
+    "KEEP-SUB": {
+     "difference": 0.0625,
+     "ci95": [
+      0.0,
+      0.1406
+     ],
+     "paired_targets": {
+      "KEEP only": 5,
+      "both": 50,
+      "neither": 8,
+      "SUB only": 1
+     },
+     "paired_history_units_both_exact": {
+      "KEEP only": 3,
+      "both": 24,
+      "neither": 5
+     }
+    },
+    "KEEP-BASE": {
+     "difference": 0.2969,
+     "ci95": [
+      0.2031,
+      0.3906
+     ],
+     "paired_targets": {
+      "KEEP only": 21,
+      "both": 34,
+      "neither": 7,
+      "BASE only": 2
+     },
+     "paired_history_units_both_exact": {
+      "KEEP only": 16,
+      "both": 11,
+      "neither": 4,
+      "BASE only": 1
+     }
+    },
+    "SUB-BASE": {
+     "difference": 0.2344,
+     "ci95": [
+      0.1562,
+      0.3125
+     ],
+     "paired_targets": {
+      "neither": 10,
+      "both": 33,
+      "SUB only": 18,
+      "BASE only": 3
+     },
+     "paired_history_units_both_exact": {
+      "neither": 6,
+      "both": 10,
+      "SUB only": 14,
+      "BASE only": 2
+     }
+    }
+   }
+  }
+ }
+}

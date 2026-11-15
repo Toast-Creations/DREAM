@@ -1,0 +1,1118 @@
+{
+  "split": "dev_all_s12",
+  "episodes": 12,
+  "seeds": [
+    "s2000",
+    "s3000",
+    "s4000"
+  ],
+  "unit": "episode (seed-averaged)",
+  "conditions": [
+    "W",
+    "W+A",
+    "W+X",
+    "W+Y"
+  ],
+  "means": {
+    "W": {
+      "complete_pair": {
+        "pooled": 0.4375,
+        "by_world": {
+          "delivery": 0.375,
+          "assembly": 0.3125,
+          "workshop": 0.625
+        }
+      },
+      "marginal": {
+        "pooled": 0.6527777777777778,
+        "by_world": {
+          "delivery": 0.6041666666666666,
+          "assembly": 0.625,
+          "workshop": 0.7291666666666666
+        }
+      },
+      "correction": {
+        "pooled": 0.375,
+        "by_world": {
+          "delivery": 0.125,
+          "assembly": 0.5,
+          "workshop": 0.5
+        }
+      },
+      "stale": {
+        "pooled": 0.5416666666666666,
+        "by_world": {
+          "delivery": 0.875,
+          "assembly": 0.375,
+          "workshop": 0.375
+        }
+      },
+      "side_A": {
+        "pooled": 0.6875,
+        "by_world": {
+          "delivery": 0.75,
+          "assembly": 0.5,
+          "workshop": 0.8125
+        }
+      },
+      "side_B": {
+        "pooled": 0.7291666666666666,
+        "by_world": {
+          "delivery": 0.5625,
+          "assembly": 0.8125,
+          "workshop": 0.8125
+        }
+      },
+      "irrelevant": {
+        "pooled": 0.7083333333333334,
+        "by_world": {
+          "delivery": 0.875,
+          "assembly": 0.625,
+          "workshop": 0.625
+        }
+      },
+      "flip:already": {
+        "pooled": 0.875,
+        "by_world": {
+          "delivery": 0.75,
+          "assembly": 1
+        }
+      },
+      "flip:closed": {
+        "pooled": 0,
+        "by_world": {
+          "delivery": 0
+        }
+      },
+      "flip:elsewhere": {
+        "pooled": 0,
+        "by_world": {
+          "delivery": 0
+        }
+      },
+      "flip:goalitem": {
+        "pooled": 0.75,
+        "by_world": {
+          "workshop": 0.75
+        }
+      },
+      "flip:goalplace": {
+        "pooled": 0.75,
+        "by_world": {
+          "delivery": 0.75
+        }
+      },
+      "flip:occupied": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:onhand": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:owned": {
+        "pooled": 0.5,
+        "by_world": {
+          "workshop": 0.5
+        }
+      },
+      "flip:permit": {
+        "pooled": 0.5,
+        "by_world": {
+          "workshop": 0.5
+        }
+      },
+      "flip:rating": {
+        "pooled": 0.25,
+        "by_world": {
+          "assembly": 0.25
+        }
+      },
+      "flip:stock": {
+        "pooled": 0.75,
+        "by_world": {
+          "workshop": 0.75
+        }
+      }
+    },
+    "W+A": {
+      "complete_pair": {
+        "pooled": 0.4930555555555555,
+        "by_world": {
+          "delivery": 0.3541666666666667,
+          "assembly": 0.3333333333333333,
+          "workshop": 0.7916666666666666
+        }
+      },
+      "marginal": {
+        "pooled": 0.6921296296296297,
+        "by_world": {
+          "delivery": 0.6319444444444444,
+          "assembly": 0.6388888888888888,
+          "workshop": 0.8055555555555556
+        }
+      },
+      "correction": {
+        "pooled": 0.4444444444444444,
+        "by_world": {
+          "delivery": 0.29166666666666663,
+          "assembly": 0.5,
+          "workshop": 0.5416666666666666
+        }
+      },
+      "stale": {
+        "pooled": 0.5,
+        "by_world": {
+          "delivery": 0.7083333333333333,
+          "assembly": 0.4166666666666667,
+          "workshop": 0.375
+        }
+      },
+      "side_A": {
+        "pooled": 0.7083333333333334,
+        "by_world": {
+          "delivery": 0.7083333333333334,
+          "assembly": 0.5208333333333334,
+          "workshop": 0.8958333333333334
+        }
+      },
+      "side_B": {
+        "pooled": 0.7708333333333333,
+        "by_world": {
+          "delivery": 0.6041666666666666,
+          "assembly": 0.8125,
+          "workshop": 0.8958333333333333
+        }
+      },
+      "irrelevant": {
+        "pooled": 0.75,
+        "by_world": {
+          "delivery": 0.875,
+          "assembly": 0.6666666666666666,
+          "workshop": 0.7083333333333333
+        }
+      },
+      "flip:already": {
+        "pooled": 0.8333333333333333,
+        "by_world": {
+          "delivery": 0.6666666666666666,
+          "assembly": 1
+        }
+      },
+      "flip:closed": {
+        "pooled": 0.08333333333333333,
+        "by_world": {
+          "delivery": 0.08333333333333333
+        }
+      },
+      "flip:elsewhere": {
+        "pooled": 0,
+        "by_world": {
+          "delivery": 0
+        }
+      },
+      "flip:goalitem": {
+        "pooled": 1,
+        "by_world": {
+          "workshop": 1
+        }
+      },
+      "flip:goalplace": {
+        "pooled": 0.6666666666666666,
+        "by_world": {
+          "delivery": 0.6666666666666666
+        }
+      },
+      "flip:occupied": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:onhand": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:owned": {
+        "pooled": 0.9166666666666666,
+        "by_world": {
+          "workshop": 0.9166666666666666
+        }
+      },
+      "flip:permit": {
+        "pooled": 0.6666666666666666,
+        "by_world": {
+          "workshop": 0.6666666666666666
+        }
+      },
+      "flip:rating": {
+        "pooled": 0.3333333333333333,
+        "by_world": {
+          "assembly": 0.3333333333333333
+        }
+      },
+      "flip:stock": {
+        "pooled": 0.5833333333333334,
+        "by_world": {
+          "workshop": 0.5833333333333334
+        }
+      }
+    },
+    "W+X": {
+      "complete_pair": {
+        "pooled": 0.4861111111111111,
+        "by_world": {
+          "delivery": 0.3541666666666667,
+          "assembly": 0.3333333333333333,
+          "workshop": 0.7708333333333333
+        }
+      },
+      "marginal": {
+        "pooled": 0.6828703703703703,
+        "by_world": {
+          "delivery": 0.611111111111111,
+          "assembly": 0.6527777777777778,
+          "workshop": 0.7847222222222222
+        }
+      },
+      "correction": {
+        "pooled": 0.4305555555555556,
+        "by_world": {
+          "delivery": 0.20833333333333331,
+          "assembly": 0.5833333333333334,
+          "workshop": 0.5
+        }
+      },
+      "stale": {
+        "pooled": 0.4861111111111111,
+        "by_world": {
+          "delivery": 0.7916666666666666,
+          "assembly": 0.2916666666666667,
+          "workshop": 0.375
+        }
+      },
+      "side_A": {
+        "pooled": 0.6736111111111112,
+        "by_world": {
+          "delivery": 0.6666666666666666,
+          "assembly": 0.5208333333333334,
+          "workshop": 0.8333333333333334
+        }
+      },
+      "side_B": {
+        "pooled": 0.7986111111111112,
+        "by_world": {
+          "delivery": 0.6458333333333334,
+          "assembly": 0.8125,
+          "workshop": 0.9375
+        }
+      },
+      "irrelevant": {
+        "pooled": 0.7222222222222222,
+        "by_world": {
+          "delivery": 0.8333333333333334,
+          "assembly": 0.6666666666666666,
+          "workshop": 0.6666666666666666
+        }
+      },
+      "flip:already": {
+        "pooled": 0.875,
+        "by_world": {
+          "delivery": 0.75,
+          "assembly": 1
+        }
+      },
+      "flip:closed": {
+        "pooled": 0.08333333333333333,
+        "by_world": {
+          "delivery": 0.08333333333333333
+        }
+      },
+      "flip:elsewhere": {
+        "pooled": 0,
+        "by_world": {
+          "delivery": 0
+        }
+      },
+      "flip:goalitem": {
+        "pooled": 0.9166666666666666,
+        "by_world": {
+          "workshop": 0.9166666666666666
+        }
+      },
+      "flip:goalplace": {
+        "pooled": 0.5833333333333334,
+        "by_world": {
+          "delivery": 0.5833333333333334
+        }
+      },
+      "flip:occupied": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:onhand": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:owned": {
+        "pooled": 0.6666666666666666,
+        "by_world": {
+          "workshop": 0.6666666666666666
+        }
+      },
+      "flip:permit": {
+        "pooled": 0.75,
+        "by_world": {
+          "workshop": 0.75
+        }
+      },
+      "flip:rating": {
+        "pooled": 0.3333333333333333,
+        "by_world": {
+          "assembly": 0.3333333333333333
+        }
+      },
+      "flip:stock": {
+        "pooled": 0.75,
+        "by_world": {
+          "workshop": 0.75
+        }
+      }
+    },
+    "W+Y": {
+      "complete_pair": {
+        "pooled": 0.4722222222222222,
+        "by_world": {
+          "delivery": 0.4166666666666667,
+          "assembly": 0.375,
+          "workshop": 0.625
+        }
+      },
+      "marginal": {
+        "pooled": 0.6736111111111112,
+        "by_world": {
+          "delivery": 0.6180555555555556,
+          "assembly": 0.6736111111111112,
+          "workshop": 0.7291666666666666
+        }
+      },
+      "correction": {
+        "pooled": 0.3194444444444444,
+        "by_world": {
+          "delivery": 0.08333333333333333,
+          "assembly": 0.4166666666666667,
+          "workshop": 0.4583333333333333
+        }
+      },
+      "stale": {
+        "pooled": 0.5833333333333334,
+        "by_world": {
+          "delivery": 0.9166666666666666,
+          "assembly": 0.45833333333333337,
+          "workshop": 0.375
+        }
+      },
+      "side_A": {
+        "pooled": 0.7013888888888888,
+        "by_world": {
+          "delivery": 0.7291666666666666,
+          "assembly": 0.5625,
+          "workshop": 0.8125
+        }
+      },
+      "side_B": {
+        "pooled": 0.7569444444444444,
+        "by_world": {
+          "delivery": 0.6458333333333334,
+          "assembly": 0.8125,
+          "workshop": 0.8125
+        }
+      },
+      "irrelevant": {
+        "pooled": 0.8055555555555556,
+        "by_world": {
+          "delivery": 0.875,
+          "assembly": 0.875,
+          "workshop": 0.6666666666666666
+        }
+      },
+      "flip:already": {
+        "pooled": 0.875,
+        "by_world": {
+          "delivery": 0.75,
+          "assembly": 1
+        }
+      },
+      "flip:closed": {
+        "pooled": 0.25,
+        "by_world": {
+          "delivery": 0.25
+        }
+      },
+      "flip:elsewhere": {
+        "pooled": 0,
+        "by_world": {
+          "delivery": 0
+        }
+      },
+      "flip:goalitem": {
+        "pooled": 0.75,
+        "by_world": {
+          "workshop": 0.75
+        }
+      },
+      "flip:goalplace": {
+        "pooled": 0.6666666666666666,
+        "by_world": {
+          "delivery": 0.6666666666666666
+        }
+      },
+      "flip:occupied": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:onhand": {
+        "pooled": 0,
+        "by_world": {
+          "assembly": 0
+        }
+      },
+      "flip:owned": {
+        "pooled": 0.5833333333333334,
+        "by_world": {
+          "workshop": 0.5833333333333334
+        }
+      },
+      "flip:permit": {
+        "pooled": 0.5833333333333334,
+        "by_world": {
+          "workshop": 0.5833333333333334
+        }
+      },
+      "flip:rating": {
+        "pooled": 0.5,
+        "by_world": {
+          "assembly": 0.5
+        }
+      },
+      "flip:stock": {
+        "pooled": 0.5833333333333334,
+        "by_world": {
+          "workshop": 0.5833333333333334
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "W+A - W": {
+      "complete_pair": {
+        "diff": 0.05555555555555556,
+        "ci95": [
+          -0.006944444444444443,
+          0.13194444444444445
+        ],
+        "by_world": {
+          "delivery": -0.020833333333333315,
+          "assembly": 0.02083333333333333,
+          "workshop": 0.16666666666666666
+        },
+        "episodes_better": 4,
+        "episodes_worse": 2
+      },
+      "marginal": {
+        "diff": 0.03935185185185187,
+        "ci95": [
+          0.013888888888888895,
+          0.06944444444444448
+        ],
+        "by_world": {
+          "delivery": 0.02777777777777779,
+          "assembly": 0.013888888888888895,
+          "workshop": 0.07638888888888892
+        },
+        "episodes_better": 9,
+        "episodes_worse": 2
+      },
+      "correction": {
+        "diff": 0.06944444444444445,
+        "ci95": [
+          2.3129646346357427e-18,
+          0.1388888888888889
+        ],
+        "by_world": {
+          "delivery": 0.16666666666666666,
+          "assembly": 6.938893903907228e-18,
+          "workshop": 0.04166666666666666
+        },
+        "episodes_better": 4,
+        "episodes_worse": 1
+      },
+      "stale": {
+        "diff": -0.04166666666666668,
+        "ci95": [
+          -0.11111111111111113,
+          0.027777777777777773
+        ],
+        "by_world": {
+          "delivery": -0.16666666666666669,
+          "assembly": 0.041666666666666664,
+          "workshop": -6.938893903907228e-18
+        },
+        "episodes_better": 2,
+        "episodes_worse": 3
+      },
+      "side_A": {
+        "diff": 0.020833333333333332,
+        "ci95": [
+          -0.01388888888888889,
+          0.06249999999999999
+        ],
+        "by_world": {
+          "delivery": -0.04166666666666667,
+          "assembly": 0.02083333333333333,
+          "workshop": 0.08333333333333334
+        },
+        "episodes_better": 3,
+        "episodes_worse": 2
+      },
+      "side_B": {
+        "diff": 0.041666666666666664,
+        "ci95": [
+          -0.006944444444444457,
+          0.09722222222222221
+        ],
+        "by_world": {
+          "delivery": 0.04166666666666667,
+          "assembly": 0.0,
+          "workshop": 0.08333333333333331
+        },
+        "episodes_better": 4,
+        "episodes_worse": 2
+      },
+      "irrelevant": {
+        "diff": 0.04166666666666666,
+        "ci95": [
+          0.013888888888888886,
+          0.08333333333333331
+        ],
+        "by_world": {
+          "delivery": 0.0,
+          "assembly": 0.041666666666666664,
+          "workshop": 0.08333333333333331
+        },
+        "episodes_better": 3,
+        "episodes_worse": 0
+      }
+    },
+    "W+A - W+X": {
+      "complete_pair": {
+        "diff": 0.006944444444444452,
+        "ci95": [
+          -0.013888888888888886,
+          0.027777777777777794
+        ],
+        "by_world": {
+          "delivery": 1.3877787807814457e-17,
+          "assembly": 0.0,
+          "workshop": 0.020833333333333343
+        },
+        "episodes_better": 2,
+        "episodes_worse": 1
+      },
+      "marginal": {
+        "diff": 0.009259259259259264,
+        "ci95": [
+          -0.011574074074074079,
+          0.030092592592592605
+        ],
+        "by_world": {
+          "delivery": 0.020833333333333343,
+          "assembly": -0.013888888888888895,
+          "workshop": 0.020833333333333343
+        },
+        "episodes_better": 5,
+        "episodes_worse": 4
+      },
+      "correction": {
+        "diff": 0.013888888888888886,
+        "ci95": [
+          -0.06944444444444446,
+          0.09722222222222222
+        ],
+        "by_world": {
+          "delivery": 0.08333333333333334,
+          "assembly": -0.08333333333333334,
+          "workshop": 0.04166666666666666
+        },
+        "episodes_better": 4,
+        "episodes_worse": 3
+      },
+      "stale": {
+        "diff": 0.013888888888888883,
+        "ci95": [
+          -0.06944444444444445,
+          0.09722222222222222
+        ],
+        "by_world": {
+          "delivery": -0.08333333333333334,
+          "assembly": 0.125,
+          "workshop": -6.938893903907228e-18
+        },
+        "episodes_better": 4,
+        "episodes_worse": 3
+      },
+      "side_A": {
+        "diff": 0.03472222222222222,
+        "ci95": [
+          0.0069444444444444475,
+          0.06944444444444443
+        ],
+        "by_world": {
+          "delivery": 0.04166666666666666,
+          "assembly": 0.0,
+          "workshop": 0.0625
+        },
+        "episodes_better": 3,
+        "episodes_worse": 0
+      },
+      "side_B": {
+        "diff": -0.027777777777777787,
+        "ci95": [
+          -0.06250000000000001,
+          0.0069444444444444475
+        ],
+        "by_world": {
+          "delivery": -0.04166666666666667,
+          "assembly": 0.0,
+          "workshop": -0.041666666666666685
+        },
+        "episodes_better": 1,
+        "episodes_worse": 4
+      },
+      "irrelevant": {
+        "diff": 0.027777777777777773,
+        "ci95": [
+          -0.027777777777777773,
+          0.08333333333333331
+        ],
+        "by_world": {
+          "delivery": 0.04166666666666666,
+          "assembly": 6.938893903907228e-18,
+          "workshop": 0.04166666666666666
+        },
+        "episodes_better": 3,
+        "episodes_worse": 1
+      }
+    },
+    "W+X - W+Y": {
+      "complete_pair": {
+        "diff": 0.013888888888888876,
+        "ci95": [
+          -0.034722222222222245,
+          0.0625
+        ],
+        "by_world": {
+          "delivery": -0.06250000000000001,
+          "assembly": -0.04166666666666667,
+          "workshop": 0.14583333333333331
+        },
+        "episodes_better": 3,
+        "episodes_worse": 3
+      },
+      "marginal": {
+        "diff": 0.009259259259259264,
+        "ci95": [
+          -0.016203703703703703,
+          0.03240740740740742
+        ],
+        "by_world": {
+          "delivery": -0.0069444444444444475,
+          "assembly": -0.020833333333333315,
+          "workshop": 0.05555555555555555
+        },
+        "episodes_better": 4,
+        "episodes_worse": 3
+      },
+      "correction": {
+        "diff": 0.11111111111111112,
+        "ci95": [
+          0.01388888888888889,
+          0.22222222222222224
+        ],
+        "by_world": {
+          "delivery": 0.125,
+          "assembly": 0.16666666666666669,
+          "workshop": 0.04166666666666667
+        },
+        "episodes_better": 4,
+        "episodes_worse": 0
+      },
+      "stale": {
+        "diff": -0.09722222222222222,
+        "ci95": [
+          -0.20833333333333334,
+          -0.013888888888888886
+        ],
+        "by_world": {
+          "delivery": -0.125,
+          "assembly": -0.16666666666666669,
+          "workshop": 0.0
+        },
+        "episodes_better": 0,
+        "episodes_worse": 3
+      },
+      "side_A": {
+        "diff": -0.027777777777777776,
+        "ci95": [
+          -0.06944444444444445,
+          0.013888888888888895
+        ],
+        "by_world": {
+          "delivery": -0.062499999999999986,
+          "assembly": -0.04166666666666667,
+          "workshop": 0.02083333333333333
+        },
+        "episodes_better": 1,
+        "episodes_worse": 4
+      },
+      "side_B": {
+        "diff": 0.041666666666666664,
+        "ci95": [
+          0.0,
+          0.08333333333333333
+        ],
+        "by_world": {
+          "delivery": 0.0,
+          "assembly": 0.0,
+          "workshop": 0.125
+        },
+        "episodes_better": 2,
+        "episodes_worse": 0
+      },
+      "irrelevant": {
+        "diff": -0.08333333333333333,
+        "ci95": [
+          -0.16666666666666666,
+          0.0
+        ],
+        "by_world": {
+          "delivery": -0.04166666666666666,
+          "assembly": -0.20833333333333334,
+          "workshop": 0.0
+        },
+        "episodes_better": 1,
+        "episodes_worse": 4
+      }
+    },
+    "W+X - W": {
+      "complete_pair": {
+        "diff": 0.048611111111111105,
+        "ci95": [
+          0.0,
+          0.1111111111111111
+        ],
+        "by_world": {
+          "delivery": -0.02083333333333333,
+          "assembly": 0.02083333333333333,
+          "workshop": 0.14583333333333331
+        },
+        "episodes_better": 3,
+        "episodes_worse": 1
+      },
+      "marginal": {
+        "diff": 0.030092592592592605,
+        "ci95": [
+          0.009259259259259264,
+          0.05324074074074076
+        ],
+        "by_world": {
+          "delivery": 0.0069444444444444475,
+          "assembly": 0.02777777777777779,
+          "workshop": 0.05555555555555558
+        },
+        "episodes_better": 7,
+        "episodes_worse": 1
+      },
+      "correction": {
+        "diff": 0.05555555555555555,
+        "ci95": [
+          -0.013888888888888895,
+          0.1388888888888889
+        ],
+        "by_world": {
+          "delivery": 0.08333333333333331,
+          "assembly": 0.08333333333333334,
+          "workshop": 0.0
+        },
+        "episodes_better": 3,
+        "episodes_worse": 1
+      },
+      "stale": {
+        "diff": -0.05555555555555556,
+        "ci95": [
+          -0.1388888888888889,
+          0.013888888888888886
+        ],
+        "by_world": {
+          "delivery": -0.08333333333333334,
+          "assembly": -0.08333333333333334,
+          "workshop": 0.0
+        },
+        "episodes_better": 1,
+        "episodes_worse": 3
+      },
+      "side_A": {
+        "diff": -0.013888888888888886,
+        "ci95": [
+          -0.05555555555555556,
+          0.02777777777777778
+        ],
+        "by_world": {
+          "delivery": -0.08333333333333333,
+          "assembly": 0.02083333333333333,
+          "workshop": 0.020833333333333343
+        },
+        "episodes_better": 3,
+        "episodes_worse": 3
+      },
+      "side_B": {
+        "diff": 0.06944444444444445,
+        "ci95": [
+          -9.25185853854297e-18,
+          0.1527777777777778
+        ],
+        "by_world": {
+          "delivery": 0.08333333333333334,
+          "assembly": 0.0,
+          "workshop": 0.125
+        },
+        "episodes_better": 3,
+        "episodes_worse": 1
+      },
+      "irrelevant": {
+        "diff": 0.013888888888888886,
+        "ci95": [
+          -0.027777777777777773,
+          0.055555555555555546
+        ],
+        "by_world": {
+          "delivery": -0.04166666666666666,
+          "assembly": 0.04166666666666666,
+          "workshop": 0.04166666666666666
+        },
+        "episodes_better": 2,
+        "episodes_worse": 1
+      }
+    },
+    "W+Y - W": {
+      "complete_pair": {
+        "diff": 0.03472222222222223,
+        "ci95": [
+          -0.013888888888888886,
+          0.08333333333333336
+        ],
+        "by_world": {
+          "delivery": 0.041666666666666685,
+          "assembly": 0.0625,
+          "workshop": 0.0
+        },
+        "episodes_better": 5,
+        "episodes_worse": 1
+      },
+      "marginal": {
+        "diff": 0.020833333333333343,
+        "ci95": [
+          -0.004629629629629613,
+          0.0462962962962963
+        ],
+        "by_world": {
+          "delivery": 0.013888888888888895,
+          "assembly": 0.048611111111111105,
+          "workshop": 2.7755575615628914e-17
+        },
+        "episodes_better": 5,
+        "episodes_worse": 1
+      },
+      "correction": {
+        "diff": -0.05555555555555556,
+        "ci95": [
+          -0.125,
+          0.0
+        ],
+        "by_world": {
+          "delivery": -0.04166666666666667,
+          "assembly": -0.08333333333333334,
+          "workshop": -0.04166666666666667
+        },
+        "episodes_better": 0,
+        "episodes_worse": 3
+      },
+      "stale": {
+        "diff": 0.041666666666666664,
+        "ci95": [
+          0.0,
+          0.09722222222222222
+        ],
+        "by_world": {
+          "delivery": 0.04166666666666666,
+          "assembly": 0.08333333333333334,
+          "workshop": 0.0
+        },
+        "episodes_better": 2,
+        "episodes_worse": 0
+      },
+      "side_A": {
+        "diff": 0.01388888888888889,
+        "ci95": [
+          -0.02083333333333334,
+          0.06249999999999999
+        ],
+        "by_world": {
+          "delivery": -0.020833333333333343,
+          "assembly": 0.0625,
+          "workshop": 1.3877787807814457e-17
+        },
+        "episodes_better": 2,
+        "episodes_worse": 2
+      },
+      "side_B": {
+        "diff": 0.02777777777777778,
+        "ci95": [
+          -0.013888888888888895,
+          0.08333333333333333
+        ],
+        "by_world": {
+          "delivery": 0.08333333333333334,
+          "assembly": 0.0,
+          "workshop": 0.0
+        },
+        "episodes_better": 2,
+        "episodes_worse": 1
+      },
+      "irrelevant": {
+        "diff": 0.09722222222222222,
+        "ci95": [
+          0.013888888888888886,
+          0.18055555555555555
+        ],
+        "by_world": {
+          "delivery": 0.0,
+          "assembly": 0.25,
+          "workshop": 0.04166666666666666
+        },
+        "episodes_better": 3,
+        "episodes_worse": 0
+      }
+    }
+  },
+  "per_seed": {
+    "s2000": {
+      "W+A - W": {
+        "complete_pair": 0.0625,
+        "marginal": 0.05555555555555558,
+        "correction": 0.16666666666666666,
+        "stale": -0.08333333333333333
+      },
+      "W+A - W+X": {
+        "complete_pair": -0.020833333333333332,
+        "marginal": -0.006944444444444434,
+        "correction": 0.041666666666666664,
+        "stale": 0.041666666666666664
+      },
+      "W+X - W+Y": {
+        "complete_pair": 0.041666666666666664,
+        "marginal": 0.04861111111111112,
+        "correction": 0.20833333333333334,
+        "stale": -0.20833333333333334
+      },
+      "W+X - W": {
+        "complete_pair": 0.08333333333333333,
+        "marginal": 0.06250000000000001,
+        "correction": 0.125,
+        "stale": -0.125
+      },
+      "W+Y - W": {
+        "complete_pair": 0.041666666666666664,
+        "marginal": 0.013888888888888895,
+        "correction": -0.08333333333333333,
+        "stale": 0.08333333333333333
+      }
+    },
+    "s3000": {
+      "W+A - W": {
+        "complete_pair": 0.041666666666666664,
+        "marginal": 0.027777777777777787,
+        "correction": 0.041666666666666664,
+        "stale": -0.041666666666666664
+      },
+      "W+A - W+X": {
+        "complete_pair": 0.0,
+        "marginal": 0.006944444444444434,
+        "correction": -0.041666666666666664,
+        "stale": 0.041666666666666664
+      },
+      "W+X - W+Y": {
+        "complete_pair": 0.041666666666666664,
+        "marginal": 0.013888888888888904,
+        "correction": 0.16666666666666666,
+        "stale": -0.125
+      },
+      "W+X - W": {
+        "complete_pair": 0.041666666666666664,
+        "marginal": 0.020833333333333353,
+        "correction": 0.08333333333333333,
+        "stale": -0.08333333333333333
+      },
+      "W+Y - W": {
+        "complete_pair": 0.0,
+        "marginal": 0.0069444444444444475,
+        "correction": -0.08333333333333333,
+        "stale": 0.041666666666666664
+      }
+    },
+    "s4000": {
+      "W+A - W": {
+        "complete_pair": 0.0625,
+        "marginal": 0.03472222222222224,
+        "correction": 0.0,
+        "stale": 0.0
+      },
+      "W+A - W+X": {
+        "complete_pair": 0.041666666666666664,
+        "marginal": 0.02777777777777779,
+        "correction": 0.041666666666666664,
+        "stale": -0.041666666666666664
+      },
+      "W+X - W+Y": {
+        "complete_pair": -0.041666666666666664,
+        "marginal": -0.03472222222222222,
+        "correction": -0.041666666666666664,
+        "stale": 0.041666666666666664
+      },
+      "W+X - W": {
+        "complete_pair": 0.020833333333333332,
+        "marginal": 0.0069444444444444475,
+        "correction": -0.041666666666666664,
+        "stale": 0.041666666666666664
+      },
+      "W+Y - W": {
+        "complete_pair": 0.0625,
+        "marginal": 0.041666666666666664,
+        "correction": 0.0,
+        "stale": 0.0
+      }
+    }
+  }
+}

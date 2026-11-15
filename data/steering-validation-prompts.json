@@ -1,0 +1,34 @@
+[
+  {
+    "convergent": "Describe a sorting routine using one standard explanation and check the stated assumptions.",
+    "divergent": "Describe a sorting routine using several alternative explanations and check the stated assumptions."
+  },
+  {
+    "convergent": "Describe a traffic intersection using one conventional model and check the stated assumptions.",
+    "divergent": "Describe a traffic intersection using multiple unrelated analogies and check the stated assumptions."
+  },
+  {
+    "convergent": "Describe a supply chain using its usual textbook description and check the stated assumptions.",
+    "divergent": "Describe a supply chain using distant structural analogies and check the stated assumptions."
+  },
+  {
+    "convergent": "Describe a chess endgame using one familiar heuristic and check the stated assumptions.",
+    "divergent": "Describe a chess endgame using several competing heuristics and check the stated assumptions."
+  },
+  {
+    "convergent": "Describe a recipe using its literal step-by-step reading and check the stated assumptions.",
+    "divergent": "Describe a recipe using alternative structural readings and check the stated assumptions."
+  },
+  {
+    "convergent": "Describe a voting rule using one standard formalization and check the stated assumptions.",
+    "divergent": "Describe a voting rule using several equivalent formalizations and check the stated assumptions."
+  },
+  {
+    "convergent": "Describe a thermostat loop using one familiar control description and check the stated assumptions.",
+    "divergent": "Describe a thermostat loop using multiple cross-domain descriptions and check the stated assumptions."
+  },
+  {
+    "convergent": "Describe a library catalog using one conventional organization and check the stated assumptions.",
+    "divergent": "Describe a library catalog using several unusual organizations and check the stated assumptions."
+  }
+]

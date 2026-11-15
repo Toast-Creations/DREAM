@@ -1,0 +1,96 @@
+{
+  "version": "1.1.0",
+  "phase": "development",
+  "seeds": [
+    11
+  ],
+  "model": {
+    "path": null,
+    "manifest": null,
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "enable_thinking": true
+  },
+  "output_dir": "../runs",
+  "steering": {
+    "layer_index": -8,
+    "lambda_values": [
+      0.0,
+      0.1
+    ],
+    "vector_path": "../artifacts/steering-V1.1.json",
+    "schedule": true,
+    "extra_arms": [
+      {
+        "name": "decat",
+        "vector_path": "../artifacts/steering-decategorization.json",
+        "kind": "decategorization",
+        "lambda": 0.2,
+        "_note": "V1.3.3: decategorization direction (document 17) as an extra arm; 0.20 lies inside the fluent range of the 1.2.1/1.2.2 dose finding."
+      }
+    ]
+  },
+  "limits": {
+    "max_trials": 600,
+    "max_seconds": 36000,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 8192,
+    "max_worlds": 12,
+    "loop_guard": {
+      "window_tokens": 1200,
+      "ngram": 16,
+      "repeat_share": 0.8,
+      "check_every": 16,
+      "_note": "V1.3.3: stops a generation whose last 1,200 tokens are at least 80% repeated 16-grams. Replayed over 13,502 recorded generations: 0 normal answers flagged (highest 0.68), 18 loops caught (all >= 0.83)."
+    }
+  },
+  "gate": {
+    "enabled": false,
+    "min_composition_gain": null,
+    "max_anchor_regression": null,
+    "max_error_rate": null,
+    "min_items_per_category": null
+  },
+  "experiment": "dream2_concepts",
+  "data_path": "../data/concept-worlds-development.jsonl",
+  "adapter": {
+    "rank": 8,
+    "alpha": 16,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "optimizer": "adamw",
+    "base_learning_rate": 0.0001,
+    "max_grad_norm": 1.0,
+    "steps_per_example": 3
+  },
+  "plasticity": {
+    "eta_values": [
+      0.0,
+      1.0
+    ],
+    "preexposure_control": true
+  },
+  "verify_base_each_trial": true,
+  "evaluation": {
+    "reasoning_modes": [
+      false,
+      true
+    ],
+    "sampling": {
+      "direct": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20
+      },
+      "thinking": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20
+      }
+    },
+    "_note": "Each learned state answers every question with reasoning off and on, same seeds across conditions. Qwen3's recommended presets."
+  },
+  "_note": "V1.3.3 DREAM 2 concept learning (document 19): 3 invented + 3 real concepts, open- and closed-book exposure, thinking-off training render, lenient blinded review."
+}

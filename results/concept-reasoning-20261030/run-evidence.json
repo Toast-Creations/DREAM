@@ -1,0 +1,141 @@
+{
+  "version": "1.1.4",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "qualified_source_sha256": "0c550837047a0e7d3880c876e7791284ec8ed1256b3ab43576186062ee4c6706",
+  "ml_tests_passed": 50,
+  "ml_tests_skipped": 0,
+  "first_attempt": "Stopped before model load at the unchanged memory reserve; no model calls. A new run hub was prepared after memory recovered.",
+  "execution": "Offline copied worker; frozen weights; no adapter; no non-fixture pause trigger.",
+  "generation_settings": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_new_tokens": 4096,
+    "seed": 11
+  },
+  "primary_review": "Single AI-assisted preliminary ratings committed before opening the condition key; no human inter-rater estimate.",
+  "blinded_ratings_sha256": "14479b279e4209f8150467c416dcbbfb86abdd3b559899fc97452732c48f8a55",
+  "source_records": [
+    {
+      "path": "PRIVATE-condition-key.json",
+      "sha256": "bafe7aa602cab0f56e85954a12dc2d9184860e154451f4cec3ffe49fab6bdc05"
+    },
+    {
+      "path": "blinded-ratings.json",
+      "sha256": "14479b279e4209f8150467c416dcbbfb86abdd3b559899fc97452732c48f8a55"
+    },
+    {
+      "path": "blinded-review.csv",
+      "sha256": "4e7aa3c11c66d18a1cdb57572236a04149eccc0c445eda2c03c408a013ee6121"
+    },
+    {
+      "path": "concepts-pilot/config.json",
+      "sha256": "2b091e343dbdc59ceff5b02ea046a5d84c4a8640d89c9b4e630ffda8f0675105"
+    },
+    {
+      "path": "concepts-pilot/environment.json",
+      "sha256": "e32ab8756abdfb5d03d172926b4b076716255c386da6f6a0c9762fa43410db57"
+    },
+    {
+      "path": "concepts-pilot/input_hashes.json",
+      "sha256": "9823600cebef5dee3086c2220d86623aabaf8e693c823c1272e98dd1cfb6722c"
+    },
+    {
+      "path": "concepts-pilot/status.json",
+      "sha256": "82538adb42b436120e771ca9920efe38289ec727d389e6d2d9f90803ba7efd4f"
+    },
+    {
+      "path": "concepts-pilot/trial-000000.json",
+      "sha256": "1d9b148b09ccceb6a784536bc8b64073fea704362ee56ef7b6b86bb6d757dfaa"
+    },
+    {
+      "path": "concepts-pilot/trial-000001.json",
+      "sha256": "2cf033b4c1e730464247d73f873abeff46c114eca35fc4b69f5b0e60d8539a07"
+    },
+    {
+      "path": "concepts-pilot/trial-000002.json",
+      "sha256": "aad6642fd41bac1aa08e11cbd17c33b383576eb836d503aa0da0a0db9540fc2b"
+    },
+    {
+      "path": "concepts-pilot/trial-000003.json",
+      "sha256": "a2356fdccc0aa409bcc2d4576d4ea06ba6b4bb10f877476fa3cbc3a237f933f7"
+    },
+    {
+      "path": "concepts-pilot/trial-000004.json",
+      "sha256": "63a699148040b6ed615fa00775db370001ec84056537512129656ee9b0ec42a7"
+    },
+    {
+      "path": "concepts-pilot/trial-000005.json",
+      "sha256": "a9555ff52b69173ec749aa32543511ab6f314feab7aea5e7904a72aa1d38ea4a"
+    },
+    {
+      "path": "concepts-pilot/trial-000006.json",
+      "sha256": "5c573f9306eb00ef2cc0b8c5bd9182e71d63021f790b7381c085f646938c6e5a"
+    },
+    {
+      "path": "concepts-pilot/trial-000007.json",
+      "sha256": "af00d05918cc5415bcc981d734b8b7fbd47ec5c9c49fee36af8a0081ff6154c5"
+    },
+    {
+      "path": "concepts-pilot/trial-000008.json",
+      "sha256": "2c711eee91e010d52e912110842527f857c7b305d469f144e13e95a19081257f"
+    },
+    {
+      "path": "concepts-pilot/trial-000009.json",
+      "sha256": "46621231a1ec8047fe226bbf6a004dbf1c3c7c65a22abe90d1d5c14e1ed8a7bb"
+    },
+    {
+      "path": "concepts-pilot/trial-000010.json",
+      "sha256": "e2adece7e87eb0c00fc5222e260ade9990c1946f5d9de5773e6eedd6ea39fc2d"
+    },
+    {
+      "path": "concepts-pilot/trial-000011.json",
+      "sha256": "5e51718cf97ac65210c1e4d8e67e19765b103c827b8eafefff5f4c365f535289"
+    },
+    {
+      "path": "concepts-smoke/config.json",
+      "sha256": "1816da9d2e3f36b4c17b9b2a112f187c0633e34c80219ec74b62bb52727c0ff0"
+    },
+    {
+      "path": "concepts-smoke/environment.json",
+      "sha256": "e32ab8756abdfb5d03d172926b4b076716255c386da6f6a0c9762fa43410db57"
+    },
+    {
+      "path": "concepts-smoke/input_hashes.json",
+      "sha256": "d2b84b551af2399f62d56443dea8cede0ba8d932e2c6d318ad56f3acc7701eae"
+    },
+    {
+      "path": "concepts-smoke/status.json",
+      "sha256": "676c9da2887e3489da0111b02116af8b8ce3ccc4234dd97c0b57f0068cf926b4"
+    },
+    {
+      "path": "concepts-smoke/trial-000000.json",
+      "sha256": "5c573f9306eb00ef2cc0b8c5bd9182e71d63021f790b7381c085f646938c6e5a"
+    },
+    {
+      "path": "concepts-smoke/trial-000001.json",
+      "sha256": "46621231a1ec8047fe226bbf6a004dbf1c3c7c65a22abe90d1d5c14e1ed8a7bb"
+    },
+    {
+      "path": "concepts-smoke/trial-000002.json",
+      "sha256": "aad6642fd41bac1aa08e11cbd17c33b383576eb836d503aa0da0a0db9540fc2b"
+    },
+    {
+      "path": "concepts-smoke/trial-000003.json",
+      "sha256": "2cf033b4c1e730464247d73f873abeff46c114eca35fc4b69f5b0e60d8539a07"
+    },
+    {
+      "path": "paired-results.json",
+      "sha256": "1d12cee8d40a81f826eb8669b3f96bb5002fbcf41297d6d57bac6dbfe6f961e0"
+    },
+    {
+      "path": "preliminary-rated-review.csv",
+      "sha256": "9498287a1264a077bdf3e805cd789c40a1d6767085d9c9c68426d4ac7ec1c7d4"
+    },
+    {
+      "path": "structural-summary.json",
+      "sha256": "60c96ee43cd1c7f21d4a5f3e372332288f67e891a78658db630bf8ae80d0bb8e"
+    }
+  ]
+}

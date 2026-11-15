@@ -1,0 +1,78 @@
+{
+  "version": "1.5.0",
+  "experiment": "survival",
+  "phase": "development",
+  "_note": "V1.5.0 continuity calibration smoke: 2 new tasks x 1 seed x 5 arms; run at prefill/peak 0.10 and 0.20 (strength set by prepare step).",
+  "model": {
+    "path": "/model",
+    "manifest": "/inputs/model-manifest.json",
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "enable_thinking": false
+  },
+  "data_path": "../data/continuity-smoke-tasks.jsonl",
+  "output_dir": "../study-results/continuity-smoke",
+  "seeds": [
+    11
+  ],
+  "survival": {
+    "mode": "continuity",
+    "arms": [
+      "baseline",
+      "perceive_targeted",
+      "perceive_random",
+      "generate_targeted",
+      "generate_random"
+    ],
+    "order_seed": 20261102,
+    "category_probe": true
+  },
+  "generation": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20
+  },
+  "steering": {
+    "layer_index": -8,
+    "vector_path": "/inputs/vectors/decategorization-vector.json",
+    "random_vector_path": "/results/artifacts/random-qualify.json",
+    "random_set_dir": "/inputs/vectors/random-set",
+    "random_count": 9,
+    "max_abs_strength": 0.4,
+    "perceive": {
+      "prefill_strength": 0.2,
+      "schedule": {
+        "shape": "release",
+        "glide_tokens": 300,
+        "end_fraction": 0.0
+      }
+    },
+    "generate": {
+      "peak_strength": 0.2,
+      "schedule": {
+        "shape": "smooth",
+        "onset_tokens": 50,
+        "plateau_tokens": 250,
+        "comedown_tokens": 300
+      }
+    }
+  },
+  "limits": {
+    "max_trials": 10,
+    "max_seconds": 43200,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 4096,
+    "max_worlds": 2,
+    "stage_input_tokens": {
+      "continuous": 2048
+    },
+    "external_retries": 1,
+    "loop_guard": {
+      "window_tokens": 1200,
+      "ngram": 16,
+      "repeat_share": 0.8,
+      "check_every": 16,
+      "_note": "V1.3.3 calibrated guard (doc 19); a loop is recorded as finish_reason=loop, never resampled."
+    }
+  }
+}

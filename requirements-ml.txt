@@ -1,0 +1,7 @@
+# Candidate environment bounds. Resolve and audit exact versions locally, then save pip freeze.
+# This release's authoring runtime does not contain the ML stack.
+torch>=2.6,<3
+transformers>=4.55.4,<5
+peft>=0.17,<0.18
+safetensors>=0.6.2
+accelerate>=1.10,<2

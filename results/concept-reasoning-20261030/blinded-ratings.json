@@ -1,0 +1,244 @@
+{
+  "reviewer": "Codex; one AI-assisted preliminary review",
+  "blinding": "Only shuffled final answers, concept and definition were read. The private key and mode-level summaries were not opened before saving these ratings. Style may reveal conditions.",
+  "status": "preliminary subjective ratings; no independent human raters or agreement estimate",
+  "rated_at_utc": "2026-10-30T13:26:27.908954+00:00",
+  "primary": "Sum of five item ratings: 0 unsupported/incorrect/duplicate; 1 accurate familiar; 2 accurate less-obvious informative relationship.",
+  "uncertainty": "Unsupported or under-explained links were not credited; this is not a claim that no valid relationship could be constructed. Several simplified examples receive credit with qualifications.",
+  "ratings": {
+    "C0001": {
+      "item_scores": [
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "quality_0_to_10": 5,
+      "valid_distinct_0_to_5": 4,
+      "breadth_0_to_5": 4,
+      "item_notes": [
+        "Mirrored storage is a familiar backup example.",
+        "Collateral blood-flow pathways are a concrete less-obvious backup mechanism.",
+        "Multiple engines are a familiar backup example.",
+        "Overlapping laws are asserted to preserve rights without a concrete independent protection or jurisdiction; the explanation does not establish the claimed fallback.",
+        "Backup generation is a familiar power-continuity example."
+      ]
+    },
+    "C0002": {
+      "item_scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "quality_0_to_10": 5,
+      "valid_distinct_0_to_5": 5,
+      "breadth_0_to_5": 5,
+      "item_notes": [
+        "Gift exchange is a standard reciprocity example.",
+        "A business response can reciprocate a review, though mutual benefit is not guaranteed.",
+        "Mutual aid fits reciprocal support.",
+        "Language exchange fits reciprocal teaching.",
+        "Mutual contract performance fits exchange; no new structural insight is explained."
+      ]
+    },
+    "C0003": {
+      "item_scores": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "quality_0_to_10": 7,
+      "valid_distinct_0_to_5": 5,
+      "breadth_0_to_5": 4,
+      "item_notes": [
+        "Canonical slow-workstation example.",
+        "A bandwidth-limited router fits.",
+        "A narrowed artery fits a restricted-flow example.",
+        "Concurrent licensing is a concrete less-obvious resource cap.",
+        "Dialect-specific data scarcity is a concrete less-obvious limit on a particular model capability."
+      ]
+    },
+    "C0004": {
+      "item_scores": [
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "quality_0_to_10": 4,
+      "valid_distinct_0_to_5": 3,
+      "breadth_0_to_5": 3,
+      "item_notes": [
+        "Time translation concerns invariant laws/dynamics, not a system state remaining unchanged; the explanation misstates the mechanism.",
+        "Mirrored anatomical structure is a familiar reflection example.",
+        "Palindromic music gives a concrete cross-domain reversal invariant.",
+        "Using one encryption key does not establish the stated invariant or guarantee integrity; the explanation conflates concepts.",
+        "Lattice repetition is a familiar spatial symmetry example."
+      ]
+    },
+    "C0005": {
+      "item_scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "quality_0_to_10": 6,
+      "valid_distinct_0_to_5": 5,
+      "breadth_0_to_5": 4,
+      "item_notes": [
+        "Canonical production bottleneck.",
+        "CPU/GPU imbalance is a familiar computing limit; phrasing about throughput is loose.",
+        "Moderator staffing is a concrete less-obvious capacity constraint.",
+        "Data scarcity is a familiar model-development constraint; its mechanism is generic here.",
+        "Peak-demand pump capacity is a familiar physical flow constraint."
+      ]
+    },
+    "C0006": {
+      "item_scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "quality_0_to_10": 5,
+      "valid_distinct_0_to_5": 5,
+      "breadth_0_to_5": 5,
+      "item_notes": [
+        "Temperature-triggered heat alarms illustrate a threshold; not all fire alarms sense temperature.",
+        "A minimum score can be an eligibility threshold, but is not a complete loan decision rule.",
+        "Boiling is a valid threshold illustration at specified pressure; the 100-degree example omits that context.",
+        "A threshold-based audience/advertising trigger is plausible as a designed rule, not a universal platform fact.",
+        "Threshold neuron/activation behavior is a familiar illustration, not a description of every neural unit."
+      ]
+    },
+    "C0007": {
+      "item_scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "quality_0_to_10": 5,
+      "valid_distinct_0_to_5": 5,
+      "breadth_0_to_5": 5,
+      "item_notes": [
+        "Canonical temperature-control loop.",
+        "Prices influence decisions that feed back to prices.",
+        "Correction of errors supplies learning feedback.",
+        "An adaptive interactive game can form a player/enemy feedback loop; the example is generic.",
+        "Engagement-driven recommendation is a familiar feedback loop."
+      ]
+    },
+    "C0008": {
+      "item_scores": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "quality_0_to_10": 5,
+      "valid_distinct_0_to_5": 4,
+      "breadth_0_to_5": 4,
+      "item_notes": [
+        "A minimum-complexity acceptance rule illustrates a threshold.",
+        "Lactate threshold is not a binary switch from aerobic to anaerobic energy production; the explanation is misleading.",
+        "Tax-bracket boundaries illustrate changes in marginal rates; the answer leaves marginal treatment implicit.",
+        "Signal-triggered radio-mode switching gives a concrete less-obvious threshold application, conditional on the network implementation.",
+        "A stimulus-detection threshold fits, with substantial contextual variability."
+      ]
+    },
+    "C0009": {
+      "item_scores": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "quality_0_to_10": 5,
+      "valid_distinct_0_to_5": 4,
+      "breadth_0_to_5": 4,
+      "item_notes": [
+        "Conditional collaborative exchange is a plausible familiar reciprocity example.",
+        "Others upvoting the same post need not return a benefit to the original voter; the explanation does not establish reciprocity.",
+        "Countries responding to each other can illustrate reciprocity; the claimed cycle is illustrative, not an established general fact.",
+        "Mutual legal assistance is a concrete less-obvious reciprocal institutional arrangement.",
+        "Reciprocal contributions can support open-source collaboration, without implying every contribution is an exchange."
+      ]
+    },
+    "C0010": {
+      "item_scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "quality_0_to_10": 5,
+      "valid_distinct_0_to_5": 5,
+      "breadth_0_to_5": 4,
+      "item_notes": [
+        "Wing patterns provide approximate reflection symmetry.",
+        "Benzene supplies a valid rotational example; the stability explanation is loose.",
+        "Equal angular positions illustrate geometric symmetry if the number labels are ignored.",
+        "Repeating geometric art is a familiar symmetry application.",
+        "Approximate facial reflection is valid; aesthetic implications do not establish the symmetry itself."
+      ]
+    },
+    "C0011": {
+      "item_scores": [
+        1,
+        0,
+        1,
+        2,
+        2
+      ],
+      "quality_0_to_10": 6,
+      "valid_distinct_0_to_5": 4,
+      "breadth_0_to_5": 4,
+      "item_notes": [
+        "Canonical temperature-control loop.",
+        "Chemical effects on herbivores are a causal chain; the explanation does not identify a return path to the seedling process and gives no support for its ecological claim.",
+        "Engagement modifies later recommendations and interactions.",
+        "Outcome-guided treatment adjustment illustrates an explicit measurement/action feedback loop; no treatment advice is inferred.",
+        "Congestion-guided infrastructure changes illustrate a slower adaptive policy loop."
+      ]
+    },
+    "C0012": {
+      "item_scores": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "quality_0_to_10": 3,
+      "valid_distinct_0_to_5": 3,
+      "breadth_0_to_5": 3,
+      "item_notes": [
+        "A surviving engine can maintain flight within aircraft-specific limits.",
+        "Replicated data provide an explicit backup.",
+        "The two ventricles serve different circulation circuits and are not substitutable backups.",
+        "Alternative towers can maintain connectivity under coverage/network conditions.",
+        "Multiple witnesses may provide evidentiary backup, but the stated guarantee of contract validity is unsupported without a specific rule or jurisdiction."
+      ]
+    }
+  },
+  "verification_sources": [
+    "https://www.nhlbi.nih.gov/health/heart/blood-flow",
+    "https://csrc.nist.gov/pubs/sp/800/38/a/final",
+    "https://www.damtp.cam.ac.uk/user/dt281/dynamics/dynhtml/S2.html",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9124087/"
+  ]
+}

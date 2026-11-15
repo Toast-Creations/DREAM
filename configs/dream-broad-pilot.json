@@ -1,0 +1,78 @@
+{
+  "version": "1.1.0",
+  "phase": "development",
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "model": {
+    "path": null,
+    "manifest": null,
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "enable_thinking": true
+  },
+  "output_dir": "../runs",
+  "steering": {
+    "layer_index": -8,
+    "lambda_values": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "vector_path": "../artifacts/steering-V1.1.json",
+    "schedule": true,
+    "extra_arms": [
+      {
+        "name": "decat",
+        "vector_path": "../artifacts/steering-decategorization.json",
+        "kind": "decategorization",
+        "lambda": 0.2,
+        "_note": "V1.3.3: decategorization direction (document 17) as an extra arm; 0.20 lies inside the fluent range of the 1.2.1/1.2.2 dose finding."
+      }
+    ]
+  },
+  "limits": {
+    "max_trials": 600,
+    "max_seconds": 36000,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 8192,
+    "max_worlds": 12,
+    "loop_guard": {
+      "window_tokens": 1200,
+      "ngram": 16,
+      "repeat_share": 0.8,
+      "check_every": 16,
+      "_note": "V1.3.3: stops a generation whose last 1,200 tokens are at least 80% repeated 16-grams. Replayed over 13,502 recorded generations: 0 normal answers flagged (highest 0.68), 18 loops caught (all >= 0.83)."
+    }
+  },
+  "gate": {
+    "enabled": false,
+    "min_composition_gain": null,
+    "max_anchor_regression": null,
+    "max_error_rate": null,
+    "min_items_per_category": null
+  },
+  "experiment": "dream",
+  "data_path": "../data/tasks-broad.jsonl",
+  "generation": {
+    "temperature": 0.7,
+    "high_temperature": 1.3,
+    "integration_temperature": 0.3,
+    "top_p": 0.9,
+    "anchor": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "_note": "V1.3.2: Qwen3's recommended thinking-mode sampling, seeded; replaces the greedy anchor that looped in reasoning. Still one shared anchor per task/seed."
+    },
+    "integration": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "_note": "V1.3.3: integration hit the 8,192 cap twice at temperature 0.3 with thinking on; Qwen3 thinking preset, seeded."
+    }
+  },
+  "_note": "V1.3.3 broad DREAM pilot: open, creativity-sensitive tasks (document 19), thinking on, divergent 0/0.05/0.1, temperature control, decategorization 0.20."
+}

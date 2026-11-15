@@ -1,0 +1,64 @@
+{
+  "version": "1.1.0",
+  "phase": "development",
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "model": {
+    "path": null,
+    "manifest": null,
+    "device": "cuda",
+    "dtype": "bfloat16"
+  },
+  "output_dir": "../runs",
+  "steering": {
+    "layer_index": -8,
+    "lambda_values": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "vector_path": "../artifacts/steering-V1.1.json",
+    "schedule": true
+  },
+  "limits": {
+    "max_trials": 600,
+    "max_seconds": 7200,
+    "max_input_tokens": 1536,
+    "max_new_tokens": 64,
+    "max_worlds": 12
+  },
+  "gate": {
+    "enabled": false,
+    "min_composition_gain": null,
+    "max_anchor_regression": null,
+    "max_error_rate": null,
+    "min_items_per_category": null
+  },
+  "experiment": "dream2",
+  "data_path": "../data/microworlds.jsonl",
+  "adapter": {
+    "rank": 8,
+    "alpha": 16,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "optimizer": "adamw",
+    "base_learning_rate": 0.0001,
+    "max_grad_norm": 1.0,
+    "steps_per_example": 1
+  },
+  "plasticity": {
+    "eta_values": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "preexposure_control": true,
+    "high_eta": 2.0
+  },
+  "verify_base_each_trial": true
+}

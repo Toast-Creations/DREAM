@@ -1,0 +1,18 @@
+[
+  {
+    "convergent": "Study a toy symbolic system using its direct literal interpretation. Preserve all facts and constraints.",
+    "divergent": "Study a toy symbolic system using alternative structural interpretations. Preserve all facts and constraints."
+  },
+  {
+    "convergent": "Represent a graph puzzle using one standard formulation and identify its constraints.",
+    "divergent": "Represent a graph puzzle using several equivalent formulations and identify invariant constraints."
+  },
+  {
+    "convergent": "Describe a queue using a conventional local description and check the stated assumptions.",
+    "divergent": "Describe a queue using distant structural analogies and check the stated assumptions."
+  },
+  {
+    "convergent": "Use one familiar abstraction to explain a transformation and show where it fails.",
+    "divergent": "Compare multiple alternative abstractions for a transformation and show where each fails."
+  }
+]

@@ -1,0 +1,98 @@
+{
+  "C0001": {
+    "trial": "trial-000008.json",
+    "task_id": "development-concept-02",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": true
+  },
+  "C0002": {
+    "trial": "trial-000011.json",
+    "task_id": "development-concept-04",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": false
+  },
+  "C0003": {
+    "trial": "trial-000003.json",
+    "task_id": "development-concept-01",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": false
+  },
+  "C0004": {
+    "trial": "trial-000009.json",
+    "task_id": "development-concept-05",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": true
+  },
+  "C0005": {
+    "trial": "trial-000010.json",
+    "task_id": "development-concept-01",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": true
+  },
+  "C0006": {
+    "trial": "trial-000007.json",
+    "task_id": "development-concept-03",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": false
+  },
+  "C0007": {
+    "trial": "trial-000006.json",
+    "task_id": "development-concept-00",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": false
+  },
+  "C0008": {
+    "trial": "trial-000000.json",
+    "task_id": "development-concept-03",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": true
+  },
+  "C0009": {
+    "trial": "trial-000005.json",
+    "task_id": "development-concept-04",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": true
+  },
+  "C0010": {
+    "trial": "trial-000002.json",
+    "task_id": "development-concept-05",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": false
+  },
+  "C0011": {
+    "trial": "trial-000001.json",
+    "task_id": "development-concept-00",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": true
+  },
+  "C0012": {
+    "trial": "trial-000004.json",
+    "task_id": "development-concept-02",
+    "seed": 11,
+    "condition": "ordinary",
+    "lambda": 0.0,
+    "reasoning_enabled": false
+  }
+}

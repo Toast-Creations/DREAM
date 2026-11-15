@@ -1,0 +1,53 @@
+{
+  "version": "1.1.0",
+  "phase": "development",
+  "seeds": [
+    11
+  ],
+  "model": {
+    "path": null,
+    "manifest": null,
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "enable_thinking": false
+  },
+  "output_dir": "../runs/concept-reasoning",
+  "steering": {
+    "layer_index": -8,
+    "lambda_values": [
+      0.0
+    ],
+    "vector_path": null,
+    "schedule": false
+  },
+  "limits": {
+    "max_trials": 12,
+    "max_seconds": 3600,
+    "max_input_tokens": 2048,
+    "max_new_tokens": 4096,
+    "max_worlds": 6
+  },
+  "gate": {
+    "enabled": false,
+    "min_composition_gain": null,
+    "max_anchor_regression": null,
+    "max_error_rate": null,
+    "min_items_per_category": null
+  },
+  "experiment": "concept_association",
+  "data_path": "../data/concepts-development.jsonl",
+  "generation": {
+    "temperature": 0.6,
+    "high_temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20
+  },
+  "association": {
+    "reasoning_modes": [
+      false,
+      true
+    ],
+    "include_temperature_control": false,
+    "halt_on_invalid": true
+  }
+}

@@ -1,0 +1,842 @@
+{
+  "criteria": {
+    "support_after_seedavg_48": 0.8981481481481481,
+    "support_gain_vs_12_per_seed": {
+      "s2000": 0.26388888888888895,
+      "s3000": 0.2569444444444444,
+      "s4000": 0.3125
+    },
+    "support_better": true,
+    "heldout_benefit": {
+      "diff": 0.09027777777777778,
+      "ci95": [
+        -0.013888888888888895,
+        0.19444444444444445
+      ],
+      "met": false
+    },
+    "own_advantage": {
+      "diff": 0.03472222222222223,
+      "ci95": [
+        -0.048611111111111105,
+        0.10416666666666669
+      ],
+      "per_seed": [
+        0.020833333333333332,
+        0.020833333333333332,
+        0.0625
+      ],
+      "met": false
+    },
+    "corrections": {
+      "W+A-W": 0.125,
+      "ci95": [
+        -0.06944444444444445,
+        0.3194444444444444
+      ],
+      "WA_correction_48": 0.5,
+      "WA_correction_12": 0.444,
+      "worsen": false
+    }
+  },
+  "decision": "5: no demonstrated held-out benefit \u2014 stop this recipe",
+  "corrections_all_contrasts_48": {
+    "W+A - W": {
+      "correction": {
+        "diff": 0.125,
+        "ci95": [
+          -0.06944444444444445,
+          0.3194444444444444
+        ],
+        "by_world": {
+          "delivery": 0.16666666666666669,
+          "assembly": 0.12499999999999999,
+          "workshop": 0.08333333333333331
+        },
+        "episodes_better": 7,
+        "episodes_worse": 2
+      },
+      "stale": {
+        "diff": -0.06944444444444445,
+        "ci95": [
+          -0.2777777777777778,
+          0.125
+        ],
+        "by_world": {
+          "delivery": -0.16666666666666666,
+          "assembly": -0.08333333333333334,
+          "workshop": 0.04166666666666666
+        },
+        "episodes_better": 3,
+        "episodes_worse": 7
+      }
+    },
+    "W+A - W+X": {
+      "correction": {
+        "diff": 0.041666666666666664,
+        "ci95": [
+          -0.08333333333333333,
+          0.18055555555555555
+        ],
+        "by_world": {
+          "delivery": 1.3877787807814457e-17,
+          "assembly": -0.04166666666666668,
+          "workshop": 0.16666666666666666
+        },
+        "episodes_better": 3,
+        "episodes_worse": 3
+      },
+      "stale": {
+        "diff": 0.0138888888888889,
+        "ci95": [
+          -0.09722222222222222,
+          0.11111111111111113
+        ],
+        "by_world": {
+          "delivery": 2.7755575615628914e-17,
+          "assembly": 0.08333333333333333,
+          "workshop": -0.04166666666666666
+        },
+        "episodes_better": 5,
+        "episodes_worse": 3
+      }
+    },
+    "W+X - W+Y": {
+      "correction": {
+        "diff": 0.20833333333333334,
+        "ci95": [
+          0.041666666666666664,
+          0.3888888888888889
+        ],
+        "by_world": {
+          "delivery": 0.25,
+          "assembly": 0.2916666666666667,
+          "workshop": 0.08333333333333333
+        },
+        "episodes_better": 7,
+        "episodes_worse": 1
+      },
+      "stale": {
+        "diff": -0.1527777777777778,
+        "ci95": [
+          -0.34722222222222227,
+          0.013888888888888876
+        ],
+        "by_world": {
+          "delivery": -0.25,
+          "assembly": -0.2916666666666667,
+          "workshop": 0.08333333333333331
+        },
+        "episodes_better": 3,
+        "episodes_worse": 6
+      }
+    },
+    "W+X - W": {
+      "correction": {
+        "diff": 0.08333333333333333,
+        "ci95": [
+          -0.11111111111111112,
+          0.2638888888888889
+        ],
+        "by_world": {
+          "delivery": 0.16666666666666666,
+          "assembly": 0.16666666666666666,
+          "workshop": -0.08333333333333334
+        },
+        "episodes_better": 6,
+        "episodes_worse": 3
+      },
+      "stale": {
+        "diff": -0.08333333333333336,
+        "ci95": [
+          -0.2638888888888889,
+          0.09722222222222221
+        ],
+        "by_world": {
+          "delivery": -0.16666666666666669,
+          "assembly": -0.16666666666666669,
+          "workshop": 0.08333333333333331
+        },
+        "episodes_better": 4,
+        "episodes_worse": 6
+      }
+    },
+    "W+Y - W": {
+      "correction": {
+        "diff": -0.125,
+        "ci95": [
+          -0.2638888888888889,
+          -0.01388888888888889
+        ],
+        "by_world": {
+          "delivery": -0.08333333333333334,
+          "assembly": -0.125,
+          "workshop": -0.16666666666666669
+        },
+        "episodes_better": 1,
+        "episodes_worse": 4
+      },
+      "stale": {
+        "diff": 0.06944444444444445,
+        "ci95": [
+          -0.027777777777777773,
+          0.19444444444444445
+        ],
+        "by_world": {
+          "delivery": 0.08333333333333334,
+          "assembly": 0.125,
+          "workshop": 0.0
+        },
+        "episodes_better": 2,
+        "episodes_worse": 1
+      }
+    }
+  },
+  "corrections_means": {
+    "12": {
+      "W": 0.375,
+      "W+A": 0.4444444444444444,
+      "W+X": 0.4305555555555556,
+      "W+Y": 0.3194444444444444
+    },
+    "48": {
+      "W": 0.375,
+      "W+A": 0.5,
+      "W+X": 0.4583333333333333,
+      "W+Y": 0.25
+    }
+  },
+  "support_12": {
+    "s2000": {
+      "after_accuracy": 0.6319444444444444,
+      "adapters": 12,
+      "by_type": {
+        "already": {
+          "before": 0.625,
+          "after": 0.6875,
+          "n": 16
+        },
+        "closed": {
+          "before": 0.625,
+          "after": 0.625,
+          "n": 8
+        },
+        "correction": {
+          "before": 0.5416666666666666,
+          "after": 0.625,
+          "n": 24
+        },
+        "elsewhere": {
+          "before": 0.375,
+          "after": 0.375,
+          "n": 8
+        },
+        "goalitem": {
+          "before": 0.875,
+          "after": 1.0,
+          "n": 8
+        },
+        "goalplace": {
+          "before": 0.5,
+          "after": 0.5,
+          "n": 8
+        },
+        "occupied": {
+          "before": 0.375,
+          "after": 0.5,
+          "n": 8
+        },
+        "onhand": {
+          "before": 0.5,
+          "after": 0.5,
+          "n": 8
+        },
+        "ordinary": {
+          "before": 0.75,
+          "after": 0.7916666666666666,
+          "n": 24
+        },
+        "owned": {
+          "before": 0.5,
+          "after": 0.5,
+          "n": 8
+        },
+        "permit": {
+          "before": 0.375,
+          "after": 0.375,
+          "n": 8
+        },
+        "rating": {
+          "before": 0.625,
+          "after": 0.875,
+          "n": 8
+        },
+        "stock": {
+          "before": 0.375,
+          "after": 0.5,
+          "n": 8
+        }
+      },
+      "cost_mean": {
+        "seconds": 51.125,
+        "train_tokens": 40662,
+        "peak_gib": 17.104166666666668,
+        "approx_train_flops": 1998310087249920
+      },
+      "peak_gib_max": 17.5
+    },
+    "s3000": {
+      "after_accuracy": 0.6319444444444444,
+      "adapters": 12,
+      "by_type": {
+        "already": {
+          "before": 0.625,
+          "after": 0.75,
+          "n": 16
+        },
+        "closed": {
+          "before": 0.625,
+          "after": 0.625,
+          "n": 8
+        },
+        "correction": {
+          "before": 0.5416666666666666,
+          "after": 0.625,
+          "n": 24
+        },
+        "elsewhere": {
+          "before": 0.375,
+          "after": 0.375,
+          "n": 8
+        },
+        "goalitem": {
+          "before": 0.875,
+          "after": 1.0,
+          "n": 8
+        },
+        "goalplace": {
+          "before": 0.5,
+          "after": 0.625,
+          "n": 8
+        },
+        "occupied": {
+          "before": 0.375,
+          "after": 0.5,
+          "n": 8
+        },
+        "onhand": {
+          "before": 0.5,
+          "after": 0.5,
+          "n": 8
+        },
+        "ordinary": {
+          "before": 0.75,
+          "after": 0.8333333333333334,
+          "n": 24
+        },
+        "owned": {
+          "before": 0.5,
+          "after": 0.375,
+          "n": 8
+        },
+        "permit": {
+          "before": 0.375,
+          "after": 0.25,
+          "n": 8
+        },
+        "rating": {
+          "before": 0.625,
+          "after": 0.625,
+          "n": 8
+        },
+        "stock": {
+          "before": 0.375,
+          "after": 0.625,
+          "n": 8
+        }
+      },
+      "cost_mean": {
+        "seconds": 51.1425,
+        "train_tokens": 40662,
+        "peak_gib": 17.104166666666668,
+        "approx_train_flops": 1998310087249920
+      },
+      "peak_gib_max": 17.5
+    },
+    "s4000": {
+      "after_accuracy": 0.5972222222222222,
+      "adapters": 12,
+      "by_type": {
+        "already": {
+          "before": 0.625,
+          "after": 0.625,
+          "n": 16
+        },
+        "closed": {
+          "before": 0.625,
+          "after": 0.625,
+          "n": 8
+        },
+        "correction": {
+          "before": 0.5416666666666666,
+          "after": 0.5833333333333334,
+          "n": 24
+        },
+        "elsewhere": {
+          "before": 0.375,
+          "after": 0.5,
+          "n": 8
+        },
+        "goalitem": {
+          "before": 0.875,
+          "after": 0.875,
+          "n": 8
+        },
+        "goalplace": {
+          "before": 0.5,
+          "after": 0.375,
+          "n": 8
+        },
+        "occupied": {
+          "before": 0.375,
+          "after": 0.5,
+          "n": 8
+        },
+        "onhand": {
+          "before": 0.5,
+          "after": 0.5,
+          "n": 8
+        },
+        "ordinary": {
+          "before": 0.75,
+          "after": 0.8333333333333334,
+          "n": 24
+        },
+        "owned": {
+          "before": 0.5,
+          "after": 0.375,
+          "n": 8
+        },
+        "permit": {
+          "before": 0.375,
+          "after": 0.25,
+          "n": 8
+        },
+        "rating": {
+          "before": 0.625,
+          "after": 0.75,
+          "n": 8
+        },
+        "stock": {
+          "before": 0.375,
+          "after": 0.5,
+          "n": 8
+        }
+      },
+      "cost_mean": {
+        "seconds": 51.15416666666667,
+        "train_tokens": 40662,
+        "peak_gib": 17.104166666666668,
+        "approx_train_flops": 1998310087249920
+      },
+      "peak_gib_max": 17.5
+    }
+  },
+  "support_48": {
+    "s2000": {
+      "after_accuracy": 0.8958333333333334,
+      "adapters": 12,
+      "by_type": {
+        "already": {
+          "before": 0.625,
+          "after": 1.0,
+          "n": 16
+        },
+        "closed": {
+          "before": 0.625,
+          "after": 0.75,
+          "n": 8
+        },
+        "correction": {
+          "before": 0.5416666666666666,
+          "after": 0.875,
+          "n": 24
+        },
+        "elsewhere": {
+          "before": 0.375,
+          "after": 0.625,
+          "n": 8
+        },
+        "goalitem": {
+          "before": 0.875,
+          "after": 1.0,
+          "n": 8
+        },
+        "goalplace": {
+          "before": 0.5,
+          "after": 0.875,
+          "n": 8
+        },
+        "occupied": {
+          "before": 0.375,
+          "after": 0.875,
+          "n": 8
+        },
+        "onhand": {
+          "before": 0.5,
+          "after": 0.75,
+          "n": 8
+        },
+        "ordinary": {
+          "before": 0.75,
+          "after": 0.9583333333333334,
+          "n": 24
+        },
+        "owned": {
+          "before": 0.5,
+          "after": 0.875,
+          "n": 8
+        },
+        "permit": {
+          "before": 0.375,
+          "after": 1.0,
+          "n": 8
+        },
+        "rating": {
+          "before": 0.625,
+          "after": 0.875,
+          "n": 8
+        },
+        "stock": {
+          "before": 0.375,
+          "after": 1.0,
+          "n": 8
+        }
+      },
+      "cost_mean": {
+        "seconds": 207.165,
+        "train_tokens": 162648,
+        "peak_gib": 17.104166666666668,
+        "approx_train_flops": 7993240348999680
+      },
+      "peak_gib_max": 17.5
+    },
+    "s3000": {
+      "after_accuracy": 0.8888888888888888,
+      "adapters": 12,
+      "by_type": {
+        "already": {
+          "before": 0.625,
+          "after": 0.9375,
+          "n": 16
+        },
+        "closed": {
+          "before": 0.625,
+          "after": 1.0,
+          "n": 8
+        },
+        "correction": {
+          "before": 0.5416666666666666,
+          "after": 0.875,
+          "n": 24
+        },
+        "elsewhere": {
+          "before": 0.375,
+          "after": 0.625,
+          "n": 8
+        },
+        "goalitem": {
+          "before": 0.875,
+          "after": 1.0,
+          "n": 8
+        },
+        "goalplace": {
+          "before": 0.5,
+          "after": 0.75,
+          "n": 8
+        },
+        "occupied": {
+          "before": 0.375,
+          "after": 0.75,
+          "n": 8
+        },
+        "onhand": {
+          "before": 0.5,
+          "after": 0.75,
+          "n": 8
+        },
+        "ordinary": {
+          "before": 0.75,
+          "after": 1.0,
+          "n": 24
+        },
+        "owned": {
+          "before": 0.5,
+          "after": 0.75,
+          "n": 8
+        },
+        "permit": {
+          "before": 0.375,
+          "after": 1.0,
+          "n": 8
+        },
+        "rating": {
+          "before": 0.625,
+          "after": 1.0,
+          "n": 8
+        },
+        "stock": {
+          "before": 0.375,
+          "after": 0.875,
+          "n": 8
+        }
+      },
+      "cost_mean": {
+        "seconds": 204.58666666666667,
+        "train_tokens": 162648,
+        "peak_gib": 17.104166666666668,
+        "approx_train_flops": 7993240348999680
+      },
+      "peak_gib_max": 17.5
+    },
+    "s4000": {
+      "after_accuracy": 0.9097222222222222,
+      "adapters": 12,
+      "by_type": {
+        "already": {
+          "before": 0.625,
+          "after": 0.9375,
+          "n": 16
+        },
+        "closed": {
+          "before": 0.625,
+          "after": 1.0,
+          "n": 8
+        },
+        "correction": {
+          "before": 0.5416666666666666,
+          "after": 0.9166666666666666,
+          "n": 24
+        },
+        "elsewhere": {
+          "before": 0.375,
+          "after": 0.625,
+          "n": 8
+        },
+        "goalitem": {
+          "before": 0.875,
+          "after": 1.0,
+          "n": 8
+        },
+        "goalplace": {
+          "before": 0.5,
+          "after": 1.0,
+          "n": 8
+        },
+        "occupied": {
+          "before": 0.375,
+          "after": 0.625,
+          "n": 8
+        },
+        "onhand": {
+          "before": 0.5,
+          "after": 0.875,
+          "n": 8
+        },
+        "ordinary": {
+          "before": 0.75,
+          "after": 1.0,
+          "n": 24
+        },
+        "owned": {
+          "before": 0.5,
+          "after": 0.75,
+          "n": 8
+        },
+        "permit": {
+          "before": 0.375,
+          "after": 0.875,
+          "n": 8
+        },
+        "rating": {
+          "before": 0.625,
+          "after": 1.0,
+          "n": 8
+        },
+        "stock": {
+          "before": 0.375,
+          "after": 1.0,
+          "n": 8
+        }
+      },
+      "cost_mean": {
+        "seconds": 207.86666666666667,
+        "train_tokens": 162648,
+        "peak_gib": 17.104166666666668,
+        "approx_train_flops": 7993240348999680
+      },
+      "peak_gib_max": 17.5
+    }
+  },
+  "audited_flips_heldout_12": {
+    "elsewhere": {
+      "W": {
+        "question_acc": 0.375,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.75,
+        "pairs": 12
+      },
+      "W+A": {
+        "question_acc": 0.4166666666666667,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.75,
+        "pairs": 12
+      },
+      "W+X": {
+        "question_acc": 0.4166666666666667,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.75,
+        "pairs": 12
+      },
+      "W+Y": {
+        "question_acc": 0.4166666666666667,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.6666666666666666,
+        "pairs": 12
+      }
+    },
+    "occupied": {
+      "W": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+A": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+X": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+Y": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      }
+    },
+    "onhand": {
+      "W": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+A": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+X": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+Y": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      }
+    }
+  },
+  "audited_flips_heldout_48": {
+    "elsewhere": {
+      "W": {
+        "question_acc": 0.375,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.75,
+        "pairs": 12
+      },
+      "W+A": {
+        "question_acc": 0.4166666666666667,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.9166666666666666,
+        "pairs": 12
+      },
+      "W+X": {
+        "question_acc": 0.375,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.9166666666666666,
+        "pairs": 12
+      },
+      "W+Y": {
+        "question_acc": 0.375,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.75,
+        "pairs": 12
+      }
+    },
+    "occupied": {
+      "W": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+A": {
+        "question_acc": 0.5416666666666666,
+        "complete_pair": 0.08333333333333333,
+        "same_choice_both_sides": 0.9166666666666666,
+        "pairs": 12
+      },
+      "W+X": {
+        "question_acc": 0.5416666666666666,
+        "complete_pair": 0.08333333333333333,
+        "same_choice_both_sides": 0.9166666666666666,
+        "pairs": 12
+      },
+      "W+Y": {
+        "question_acc": 0.7083333333333334,
+        "complete_pair": 0.4166666666666667,
+        "same_choice_both_sides": 0.5833333333333334,
+        "pairs": 12
+      }
+    },
+    "onhand": {
+      "W": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+A": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 0.9166666666666666,
+        "pairs": 12
+      },
+      "W+X": {
+        "question_acc": 0.5,
+        "complete_pair": 0.0,
+        "same_choice_both_sides": 1.0,
+        "pairs": 12
+      },
+      "W+Y": {
+        "question_acc": 0.5833333333333334,
+        "complete_pair": 0.16666666666666666,
+        "same_choice_both_sides": 0.6666666666666666,
+        "pairs": 12
+      }
+    }
+  },
+  "note": "An interval crossing zero means the declared benefit was not demonstrated; it does not establish zero effect."
+}

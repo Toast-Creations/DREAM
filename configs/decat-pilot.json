@@ -1,0 +1,74 @@
+{
+  "version": "1.2.0",
+  "experiment": "decategorization",
+  "phase": "development",
+  "seeds": [
+    11
+  ],
+  "model": {
+    "path": null,
+    "manifest": null,
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "enable_thinking": false
+  },
+  "output_dir": "../runs/decategorization",
+  "data_path": "../data/objects-development.jsonl",
+  "steering": {
+    "layer_index": -8,
+    "max_abs_strength": 0.4,
+    "vector_path": "../artifacts/decategorization-vector.json",
+    "random_vector_path": "../artifacts/decategorization-random-vector.json",
+    "divergent_vector_path": null
+  },
+  "trip": {
+    "_note": "V1.2.3: peak 0.40 chosen by David from the 1.2.2 high-dose sweep (Runs/decategorization-20261030-113050): 0.30 strange but testable, 0.40 dreamlike with recoverable kernels, 0.50 looping. Lengths 100/350/300 from V1.2.1. Constant, rigid and random arms use the same |0.40|.",
+    "peak_strength": 0.4,
+    "shape": "smooth",
+    "onset_tokens": 100,
+    "plateau_tokens": 350,
+    "comedown_tokens": 300
+  },
+  "temperature_anneal": {
+    "start": 1.3,
+    "end": 0.6,
+    "anneal_tokens": 750
+  },
+  "generation": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "sober_temperature": 0.6
+  },
+  "limits": {
+    "max_trials": 108,
+    "max_seconds": 28800,
+    "max_input_tokens": 1024,
+    "max_new_tokens": 3072,
+    "sober_max_input_tokens": 4608,
+    "sober_max_new_tokens": 3072,
+    "max_worlds": 12
+  },
+  "gate": {
+    "enabled": false,
+    "min_composition_gain": null,
+    "max_anchor_regression": null,
+    "max_error_rate": null,
+    "min_items_per_category": null
+  },
+  "decategorization": {
+    "conditions": [
+      "baseline",
+      "constant",
+      "trip",
+      "rigid_trip",
+      "two_step_control",
+      "two_step_constant",
+      "trip_then_sober",
+      "temperature_anneal",
+      "random_trip"
+    ],
+    "dose_sweep": [],
+    "halt_on_invalid": false
+  }
+}

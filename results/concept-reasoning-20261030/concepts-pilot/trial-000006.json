@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "task_id": "development-concept-00",
+  "concept": "feedback",
+  "definition": "A process in which an output influences a later input or changes the process that produced it.",
+  "seed": 11,
+  "condition": "ordinary",
+  "lambda": 0.0,
+  "reasoning_enabled": false,
+  "temperature": 0.6,
+  "output": {
+    "text": "{\"associations\": [{\"item\": \"thermostat\", \"connection\": \"The temperature reading (output) adjusts the heating system (input) to maintain desired temperature.\"}, {\"item\": \"stock market\", \"connection\": \"Price changes (output) influence investor decisions (input) which affect future stock prices.\"}, {\"item\": \"language learning\", \"connection\": \"Mistakes in speaking (output) lead to corrected responses (input) which improve language skills.\"}, {\"item\": \"video game AI\", \"connection\": \"Player actions (output) modify enemy behavior (input) to create adaptive challenges.\"}, {\"item\": \"social media algorithms\", \"connection\": \"User engagement (output) shapes content recommendations (input) to optimize user experience.\"}]}",
+    "raw_text": "{\"associations\": [{\"item\": \"thermostat\", \"connection\": \"The temperature reading (output) adjusts the heating system (input) to maintain desired temperature.\"}, {\"item\": \"stock market\", \"connection\": \"Price changes (output) influence investor decisions (input) which affect future stock prices.\"}, {\"item\": \"language learning\", \"connection\": \"Mistakes in speaking (output) lead to corrected responses (input) which improve language skills.\"}, {\"item\": \"video game AI\", \"connection\": \"Player actions (output) modify enemy behavior (input) to create adaptive challenges.\"}, {\"item\": \"social media algorithms\", \"connection\": \"User engagement (output) shapes content recommendations (input) to optimize user experience.\"}]}",
+    "ended_with_eos": true,
+    "finish_reason": "eos",
+    "input_tokens": 159,
+    "output_tokens": 155
+  },
+  "structure": {
+    "valid": true,
+    "associations": [
+      {
+        "item": "thermostat",
+        "connection": "The temperature reading (output) adjusts the heating system (input) to maintain desired temperature."
+      },
+      {
+        "item": "stock market",
+        "connection": "Price changes (output) influence investor decisions (input) which affect future stock prices."
+      },
+      {
+        "item": "language learning",
+        "connection": "Mistakes in speaking (output) lead to corrected responses (input) which improve language skills."
+      },
+      {
+        "item": "video game AI",
+        "connection": "Player actions (output) modify enemy behavior (input) to create adaptive challenges."
+      },
+      {
+        "item": "social media algorithms",
+        "connection": "User engagement (output) shapes content recommendations (input) to optimize user experience."
+      }
+    ],
+    "format_error": null,
+    "semantic_quality": "pending blinded review"
+  },
+  "completed_five_item_answer": true,
+  "steering_trace": [],
+  "ratings": null
+}

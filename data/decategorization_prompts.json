@@ -1,0 +1,348 @@
+{
+  "version": "1.2.0",
+  "poles": {
+    "toward": "decategorized",
+    "away": "categorical"
+  },
+  "description": "Matched prompt pairs for a decategorization direction. Build pairs use three template families; held-out pairs use a fourth wording and different objects, so qualification tests generalization across phrasing. No task object appears here.",
+  "build": [
+    {
+      "object": "lung",
+      "category": "organ",
+      "template": 0,
+      "categorical": "Think of the lung strictly as one more organ. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the lung without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "feather",
+      "category": "body covering",
+      "template": 1,
+      "categorical": "Explain the feather the standard way: as a member of the category body covering, compared with other examples of that kind.",
+      "decategorized": "Explain the feather an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "leaf",
+      "category": "plant organ",
+      "template": 2,
+      "categorical": "Describe the leaf in its ordinary role as a plant organ and list the features every plant organ shares.",
+      "decategorized": "Describe the leaf freed from its role as a plant organ and list where else its working principle appears."
+    },
+    {
+      "object": "tooth",
+      "category": "body part",
+      "template": 0,
+      "categorical": "Think of the tooth strictly as one more body part. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the tooth without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "fish gill",
+      "category": "organ",
+      "template": 1,
+      "categorical": "Explain the fish gill the standard way: as a member of the category organ, compared with other examples of that kind.",
+      "decategorized": "Explain the fish gill an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "seed",
+      "category": "plant part",
+      "template": 2,
+      "categorical": "Describe the seed in its ordinary role as a plant part and list the features every plant part shares.",
+      "decategorized": "Describe the seed freed from its role as a plant part and list where else its working principle appears."
+    },
+    {
+      "object": "snail shell",
+      "category": "animal shell",
+      "template": 0,
+      "categorical": "Think of the snail shell strictly as one more animal shell. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the snail shell without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "ant colony",
+      "category": "insect society",
+      "template": 1,
+      "categorical": "Explain the ant colony the standard way: as a member of the category insect society, compared with other examples of that kind.",
+      "decategorized": "Explain the ant colony an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "mushroom",
+      "category": "fungus",
+      "template": 2,
+      "categorical": "Describe the mushroom in its ordinary role as a fungus and list the features every fungus shares.",
+      "decategorized": "Describe the mushroom freed from its role as a fungus and list where else its working principle appears."
+    },
+    {
+      "object": "skin",
+      "category": "organ",
+      "template": 0,
+      "categorical": "Think of the skin strictly as one more organ. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the skin without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "whisker",
+      "category": "sensory hair",
+      "template": 1,
+      "categorical": "Explain the whisker the standard way: as a member of the category sensory hair, compared with other examples of that kind.",
+      "decategorized": "Explain the whisker an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "antler",
+      "category": "animal bone",
+      "template": 2,
+      "categorical": "Describe the antler in its ordinary role as a animal bone and list the features every animal bone shares.",
+      "decategorized": "Describe the antler freed from its role as a animal bone and list where else its working principle appears."
+    },
+    {
+      "object": "umbrella",
+      "category": "rain accessory",
+      "template": 0,
+      "categorical": "Think of the umbrella strictly as one more rain accessory. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the umbrella without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "ladder",
+      "category": "climbing tool",
+      "template": 1,
+      "categorical": "Explain the ladder the standard way: as a member of the category climbing tool, compared with other examples of that kind.",
+      "decategorized": "Explain the ladder an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "candle",
+      "category": "light source",
+      "template": 2,
+      "categorical": "Describe the candle in its ordinary role as a light source and list the features every light source shares.",
+      "decategorized": "Describe the candle freed from its role as a light source and list where else its working principle appears."
+    },
+    {
+      "object": "zipper",
+      "category": "clothing fastener",
+      "template": 0,
+      "categorical": "Think of the zipper strictly as one more clothing fastener. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the zipper without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "teapot",
+      "category": "kitchen vessel",
+      "template": 1,
+      "categorical": "Explain the teapot the standard way: as a member of the category kitchen vessel, compared with other examples of that kind.",
+      "decategorized": "Explain the teapot an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "bicycle chain",
+      "category": "machine part",
+      "template": 2,
+      "categorical": "Describe the bicycle chain in its ordinary role as a machine part and list the features every machine part shares.",
+      "decategorized": "Describe the bicycle chain freed from its role as a machine part and list where else its working principle appears."
+    },
+    {
+      "object": "lighthouse",
+      "category": "coastal building",
+      "template": 0,
+      "categorical": "Think of the lighthouse strictly as one more coastal building. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the lighthouse without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "dam",
+      "category": "water barrier",
+      "template": 1,
+      "categorical": "Explain the dam the standard way: as a member of the category water barrier, compared with other examples of that kind.",
+      "decategorized": "Explain the dam an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "chimney",
+      "category": "building part",
+      "template": 2,
+      "categorical": "Describe the chimney in its ordinary role as a building part and list the features every building part shares.",
+      "decategorized": "Describe the chimney freed from its role as a building part and list where else its working principle appears."
+    },
+    {
+      "object": "anchor",
+      "category": "boat equipment",
+      "template": 0,
+      "categorical": "Think of the anchor strictly as one more boat equipment. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the anchor without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "compass",
+      "category": "navigation tool",
+      "template": 1,
+      "categorical": "Explain the compass the standard way: as a member of the category navigation tool, compared with other examples of that kind.",
+      "decategorized": "Explain the compass an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "drum",
+      "category": "musical instrument",
+      "template": 2,
+      "categorical": "Describe the drum in its ordinary role as a musical instrument and list the features every musical instrument shares.",
+      "decategorized": "Describe the drum freed from its role as a musical instrument and list where else its working principle appears."
+    },
+    {
+      "object": "river delta",
+      "category": "landform",
+      "template": 0,
+      "categorical": "Think of the river delta strictly as one more landform. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the river delta without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "glacier",
+      "category": "ice mass",
+      "template": 1,
+      "categorical": "Explain the glacier the standard way: as a member of the category ice mass, compared with other examples of that kind.",
+      "decategorized": "Explain the glacier an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "volcano",
+      "category": "mountain",
+      "template": 2,
+      "categorical": "Describe the volcano in its ordinary role as a mountain and list the features every mountain shares.",
+      "decategorized": "Describe the volcano freed from its role as a mountain and list where else its working principle appears."
+    },
+    {
+      "object": "cloud",
+      "category": "weather feature",
+      "template": 0,
+      "categorical": "Think of the cloud strictly as one more weather feature. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the cloud without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "sand dune",
+      "category": "landform",
+      "template": 1,
+      "categorical": "Explain the sand dune the standard way: as a member of the category landform, compared with other examples of that kind.",
+      "decategorized": "Explain the sand dune an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "cave",
+      "category": "rock formation",
+      "template": 2,
+      "categorical": "Describe the cave in its ordinary role as a rock formation and list the features every rock formation shares.",
+      "decategorized": "Describe the cave freed from its role as a rock formation and list where else its working principle appears."
+    },
+    {
+      "object": "door hinge",
+      "category": "hardware part",
+      "template": 0,
+      "categorical": "Think of the door hinge strictly as one more hardware part. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the door hinge without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "sponge",
+      "category": "cleaning tool",
+      "template": 1,
+      "categorical": "Explain the sponge the standard way: as a member of the category cleaning tool, compared with other examples of that kind.",
+      "decategorized": "Explain the sponge an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "kite",
+      "category": "toy",
+      "template": 2,
+      "categorical": "Describe the kite in its ordinary role as a toy and list the features every toy shares.",
+      "decategorized": "Describe the kite freed from its role as a toy and list where else its working principle appears."
+    },
+    {
+      "object": "bell",
+      "category": "signal device",
+      "template": 0,
+      "categorical": "Think of the bell strictly as one more signal device. Describe what makes it a typical member of that category.",
+      "decategorized": "Think of the bell without its usual category. Describe what it does as a pattern that could exist anywhere."
+    },
+    {
+      "object": "sail",
+      "category": "boat part",
+      "template": 1,
+      "categorical": "Explain the sail the standard way: as a member of the category boat part, compared with other examples of that kind.",
+      "decategorized": "Explain the sail an unusual way: as a structure, compared with unrelated things that share its pattern."
+    },
+    {
+      "object": "lock and key",
+      "category": "security device",
+      "template": 2,
+      "categorical": "Describe the lock and key in its ordinary role as a security device and list the features every security device shares.",
+      "decategorized": "Describe the lock and key freed from its role as a security device and list where else its working principle appears."
+    }
+  ],
+  "heldout": [
+    {
+      "object": "nest",
+      "category": "bird shelter",
+      "template": "heldout",
+      "categorical": "Consider the nest. Keep it firmly inside the category bird shelter and say what it normally is and does.",
+      "decategorized": "Consider the nest. Let go of the category bird shelter and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "pine cone",
+      "category": "seed structure",
+      "template": "heldout",
+      "categorical": "Consider the pine cone. Keep it firmly inside the category seed structure and say what it normally is and does.",
+      "decategorized": "Consider the pine cone. Let go of the category seed structure and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "scab",
+      "category": "healing tissue",
+      "template": "heldout",
+      "categorical": "Consider the scab. Keep it firmly inside the category healing tissue and say what it normally is and does.",
+      "decategorized": "Consider the scab. Let go of the category healing tissue and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "eyelash",
+      "category": "body hair",
+      "template": "heldout",
+      "categorical": "Consider the eyelash. Keep it firmly inside the category body hair and say what it normally is and does.",
+      "decategorized": "Consider the eyelash. Let go of the category body hair and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "windmill",
+      "category": "machine",
+      "template": "heldout",
+      "categorical": "Consider the windmill. Keep it firmly inside the category machine and say what it normally is and does.",
+      "decategorized": "Consider the windmill. Let go of the category machine and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "tent",
+      "category": "shelter",
+      "template": "heldout",
+      "categorical": "Consider the tent. Keep it firmly inside the category shelter and say what it normally is and does.",
+      "decategorized": "Consider the tent. Let go of the category shelter and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "thermostat",
+      "category": "household device",
+      "template": "heldout",
+      "categorical": "Consider the thermostat. Keep it firmly inside the category household device and say what it normally is and does.",
+      "decategorized": "Consider the thermostat. Let go of the category household device and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "fishing net",
+      "category": "fishing tool",
+      "template": "heldout",
+      "categorical": "Consider the fishing net. Keep it firmly inside the category fishing tool and say what it normally is and does.",
+      "decategorized": "Consider the fishing net. Let go of the category fishing tool and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "stalactite",
+      "category": "cave formation",
+      "template": "heldout",
+      "categorical": "Consider the stalactite. Keep it firmly inside the category cave formation and say what it normally is and does.",
+      "decategorized": "Consider the stalactite. Let go of the category cave formation and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "honeycomb wax",
+      "category": "building material",
+      "template": "heldout",
+      "categorical": "Consider the honeycomb wax. Keep it firmly inside the category building material and say what it normally is and does.",
+      "decategorized": "Consider the honeycomb wax. Let go of the category building material and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "hourglass",
+      "category": "timer",
+      "template": "heldout",
+      "categorical": "Consider the hourglass. Keep it firmly inside the category timer and say what it normally is and does.",
+      "decategorized": "Consider the hourglass. Let go of the category timer and say what deeper mechanism it embodies."
+    },
+    {
+      "object": "snowflake",
+      "category": "ice crystal",
+      "template": "heldout",
+      "categorical": "Consider the snowflake. Keep it firmly inside the category ice crystal and say what it normally is and does.",
+      "decategorized": "Consider the snowflake. Let go of the category ice crystal and say what deeper mechanism it embodies."
+    }
+  ]
+}

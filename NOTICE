@@ -1,0 +1,18 @@
+DREAM research code and documentation
+Copyright 2026 Toast Creations LLC
+Research lead: David Cook
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+AI tools (Anthropic Claude, including Claude Code, and OpenAI Codex/GPT models) assisted
+with drafting, literature synthesis, code generation, revision, tests and analysis, and
+served as model judges in some studies. This notice does not claim scientific priority,
+patent inventorship, or copyright in material that is not protectable.
+
+The project builds on prior work identified in docs/protocols/07-Literature-and-Novelty.md,
+docs/protocols/12-References-and-Method-Credits.md, METHOD_CREDITS.md, references.bib and
+references.json. A reference is not a claim of code reuse, collaboration, affiliation, or
+endorsement.
+
+Third-party model weights, libraries, and source publications keep their own licenses.
+No model weights or third-party library source are included.

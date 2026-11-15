@@ -1,0 +1,112 @@
+{
+  "version": "1.2.0",
+  "experiment": "decategorization",
+  "phase": "development",
+  "seeds": [
+    11
+  ],
+  "model": {
+    "path": null,
+    "manifest": null,
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "enable_thinking": false
+  },
+  "output_dir": "../runs/decat-explore-smoke",
+  "data_path": "../data/objects-smoke.jsonl",
+  "steering": {
+    "layer_index": -8,
+    "max_abs_strength": 0.6,
+    "vector_path": "../artifacts/decategorization-vector.json",
+    "random_vector_path": "../artifacts/decategorization-random-vector.json",
+    "divergent_vector_path": null
+  },
+  "trip": {
+    "_note": "V1.2.3: peak 0.40 chosen by David from the 1.2.2 high-dose sweep (Runs/decategorization-20261030-113050): 0.30 strange but testable, 0.40 dreamlike with recoverable kernels, 0.50 looping. Lengths 100/350/300 from V1.2.1. Constant, rigid and random arms use the same |0.40|.",
+    "peak_strength": 0.4,
+    "shape": "smooth",
+    "onset_tokens": 100,
+    "plateau_tokens": 350,
+    "comedown_tokens": 300
+  },
+  "temperature_anneal": {
+    "start": 1.3,
+    "end": 0.6,
+    "anneal_tokens": 750
+  },
+  "generation": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "sober_temperature": 0.6
+  },
+  "limits": {
+    "max_trials": 14,
+    "max_seconds": 9000,
+    "max_input_tokens": 1024,
+    "max_new_tokens": 3072,
+    "sober_max_input_tokens": 4608,
+    "sober_max_new_tokens": 3072,
+    "max_worlds": 2
+  },
+  "gate": {
+    "enabled": false,
+    "min_composition_gain": null,
+    "max_anchor_regression": null,
+    "max_error_rate": null,
+    "min_items_per_category": null
+  },
+  "decategorization": {
+    "conditions": [
+      "baseline",
+      "trip",
+      "trip_ladder_40",
+      "trip_ladder_50",
+      "trip_ladder_60",
+      "trip_flat",
+      "baseline_flat"
+    ],
+    "dose_sweep": [],
+    "halt_on_invalid": false
+  },
+  "ladder": {
+    "_note": "V1.3.1: five passes; each named ladder steps down linearly to 0.05. 40 continues from the trip peak; 50 and 60 are David's start-level tests ('start the lader at .6 and .5 as test too'). 0.6 exceeds every dose observed so far.",
+    "roles": [
+      "unpack",
+      "stretch",
+      "connect",
+      "distill",
+      "ground"
+    ],
+    "levels": {
+      "40": [
+        0.4,
+        0.33,
+        0.26,
+        0.19,
+        0.12,
+        0.05
+      ],
+      "50": [
+        0.5,
+        0.41,
+        0.32,
+        0.23,
+        0.14,
+        0.05
+      ],
+      "60": [
+        0.6,
+        0.49,
+        0.38,
+        0.27,
+        0.16,
+        0.05
+      ]
+    },
+    "glide_tokens": 600,
+    "max_new_tokens": 3072,
+    "max_input_tokens": 6144,
+    "temperature": 0.6
+  }
+}

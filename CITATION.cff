@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: If you use this code or its results, please cite it using these metadata, and cite the exact commit or release you used.
+title: "DREAM: pre-specified experiments on activation steering, reversible learning and temporal state tracking in open-weight language models"
+type: software
+authors:
+  - family-names: Cook
+    given-names: David
+    affiliation: Toast Creations LLC
+  - name: Toast Creations LLC
+    website: https://toastcreations.info/
+repository-code: https://github.com/Toast-Creations/DREAM
+license: Apache-2.0
+version: 2.0.0
+date-released: '2026-11-15'
+keywords:
+  - activation steering
+  - language models
+  - negative results
+  - LoRA
+  - state tracking
+  - information extraction
+  - pre-registration

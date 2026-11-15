@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "task_id": "development-concept-01",
+  "concept": "bottleneck",
+  "definition": "A limiting stage or resource that constrains the performance or flow of a larger system.",
+  "seed": 11,
+  "condition": "ordinary",
+  "lambda": 0.0,
+  "reasoning_enabled": false,
+  "temperature": 0.6,
+  "output": {
+    "text": "{\"associations\": [{\"item\": \"factory assembly line\", \"connection\": \"A slow-moving workstation limits the overall production rate of the entire manufacturing process.\"}, {\"item\": \"internet router\", \"connection\": \"A router with limited bandwidth can restrict the speed at which data flows across an entire network.\"}, {\"item\": \"blood circulation\", \"connection\": \"A narrowed artery acts as a bottleneck, reducing blood flow to vital organs.\"}, {\"item\": \"software licensing system\", \"connection\": \"A limited number of licenses restricts the number of users who can access a particular software application.\"}, {\"item\": \"language translation model\", \"connection\": \"A model with insufficient training data on a specific dialect can hinder accurate translations for that region.\"}]}",
+    "raw_text": "{\"associations\": [{\"item\": \"factory assembly line\", \"connection\": \"A slow-moving workstation limits the overall production rate of the entire manufacturing process.\"}, {\"item\": \"internet router\", \"connection\": \"A router with limited bandwidth can restrict the speed at which data flows across an entire network.\"}, {\"item\": \"blood circulation\", \"connection\": \"A narrowed artery acts as a bottleneck, reducing blood flow to vital organs.\"}, {\"item\": \"software licensing system\", \"connection\": \"A limited number of licenses restricts the number of users who can access a particular software application.\"}, {\"item\": \"language translation model\", \"connection\": \"A model with insufficient training data on a specific dialect can hinder accurate translations for that region.\"}]}",
+    "ended_with_eos": true,
+    "finish_reason": "eos",
+    "input_tokens": 158,
+    "output_tokens": 154
+  },
+  "structure": {
+    "valid": true,
+    "associations": [
+      {
+        "item": "factory assembly line",
+        "connection": "A slow-moving workstation limits the overall production rate of the entire manufacturing process."
+      },
+      {
+        "item": "internet router",
+        "connection": "A router with limited bandwidth can restrict the speed at which data flows across an entire network."
+      },
+      {
+        "item": "blood circulation",
+        "connection": "A narrowed artery acts as a bottleneck, reducing blood flow to vital organs."
+      },
+      {
+        "item": "software licensing system",
+        "connection": "A limited number of licenses restricts the number of users who can access a particular software application."
+      },
+      {
+        "item": "language translation model",
+        "connection": "A model with insufficient training data on a specific dialect can hinder accurate translations for that region."
+      }
+    ],
+    "format_error": null,
+    "semantic_quality": "pending blinded review"
+  },
+  "completed_five_item_answer": true,
+  "steering_trace": [],
+  "ratings": null
+}
