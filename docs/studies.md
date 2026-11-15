@@ -1,6 +1,6 @@
 # Study index
 
-Each row links to the study's report in [`results/`](../results/). The reports are copied unchanged from the run folders, except that local absolute paths are replaced with placeholders: `<DREAM_HOME>` is the project folder, `<DREAM_MODELS>` the model store, `<venv>` the Python environment. Where a study has errata, the [errata files](../results/ERRATA/) or the hub's `ERRATA.md` take precedence over the report text.
+Each row links to the study's report in [`results/`](../results/). The full raw outputs for every run folder are in the [Zenodo data archive](https://doi.org/10.5281/zenodo.24264840); each zip is named after its run folder. The reports are copied unchanged from the run folders, except that local absolute paths are replaced with placeholders: `<DREAM_HOME>` is the project folder, `<DREAM_MODELS>` the model store, `<venv>` the Python environment. Where a study has errata, the [errata files](../results/ERRATA/) or the hub's `ERRATA.md` take precedence over the report text.
 
 "Version" is the source version used for the study. Every version's code is folded into the single current package in `src/`; the per-version copies stay in the project's private archive.
 

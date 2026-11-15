@@ -1,6 +1,6 @@
 # DREAM
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24261209.svg)](https://doi.org/10.5281/zenodo.24261209) [![tests](https://github.com/Toast-Creations/DREAM/actions/workflows/tests.yml/badge.svg)](https://github.com/Toast-Creations/DREAM/actions/workflows/tests.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24261209.svg)](https://doi.org/10.5281/zenodo.24261209) [![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24264840.svg)](https://doi.org/10.5281/zenodo.24264840) [![tests](https://github.com/Toast-Creations/DREAM/actions/workflows/tests.yml/badge.svg)](https://github.com/Toast-Creations/DREAM/actions/workflows/tests.yml)
 
 DREAM is an independent research project. It runs controlled, pre-specified experiments on open-weight language models (mostly Qwen3-8B and Qwen3-32B) on a single 24 GB GPU. Everything is published here: the code, the frozen study plans, the reports and the errata, including the experiments that failed.
 
@@ -35,7 +35,7 @@ docs/           research lines, protocols, study index, proposals, manuscript
 results/        per-study reports, plans and errata copied from the run folders
 ```
 
-Raw model outputs and judge ratings (about 3.8 GB) are not in git. A versioned data archive is planned.
+Raw model outputs, judge ratings, logs and LoRA adapters (52,528 files) are not in git. They are archived on Zenodo as **[DREAM run data, archive v1](https://doi.org/10.5281/zenodo.24264840)** (DOI 10.5281/zenodo.24264840): one zip per run folder, byte-identical to what the studies produced, with a sha256 manifest. Unzip the folders side by side and set `DREAM_RUNS` to that directory.
 
 ## Quick start
 
@@ -53,7 +53,7 @@ Running real studies needs local model weights with a verified manifest. See [do
 
 Cook, D. (2026). *DREAM: pre-specified experiments on activation steering, reversible learning and temporal state tracking in open-weight language models.* Toast Creations LLC. https://doi.org/10.5281/zenodo.24261209
 
-That DOI always points to the latest version. Each release also has its own DOI, listed on its [Zenodo record](https://doi.org/10.5281/zenodo.24261209); the latest, v2.0.2, is [10.5281/zenodo.24264554](https://doi.org/10.5281/zenodo.24264554). Please cite the version you used. Machine-readable metadata is in [CITATION.cff](CITATION.cff).
+That DOI always points to the latest version. Each release also has its own DOI, listed on its [Zenodo record](https://doi.org/10.5281/zenodo.24261209); the latest, v2.0.2, is [10.5281/zenodo.24264554](https://doi.org/10.5281/zenodo.24264554). Please cite the version you used. If you use the run data, please also cite the data archive: Cook, D. (2026). *DREAM run data, archive v1.* Toast Creations LLC. https://doi.org/10.5281/zenodo.24264840. Machine-readable metadata is in [CITATION.cff](CITATION.cff).
 
 ## AI assistance
 

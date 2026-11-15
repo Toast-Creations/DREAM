@@ -26,7 +26,7 @@ Scripts find local resources through environment variables (see `src/dream_core/
 | Variable | Meaning | Default |
 |---|---|---|
 | `DREAM_HOME` | project folder holding `Runs/` and `Code/` | `~/DREAM` |
-| `DREAM_RUNS` | run hubs (study outputs) | `$DREAM_HOME/Runs` |
+| `DREAM_RUNS` | run hubs (study outputs; download from the [data archive](https://doi.org/10.5281/zenodo.24264840)) | `$DREAM_HOME/Runs` |
 | `DREAM_CODE` | archived per-version source copies (optional) | `$DREAM_HOME/Code` |
 | `DREAM_MODELS` | model store | `~/DREAM-models` |
 | `DREAM_PY` | Python interpreter for child runs | the current interpreter |
