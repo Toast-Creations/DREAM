@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Python 3.10 or later. The core logic has no dependencies.
+- Python 3.11 or later (CI tests 3.11–3.13; the research ran on 3.12). The core logic has no dependencies.
 - For model runs: `torch`, `transformers`, `peft`, `safetensors` and `accelerate` (`pip install -e '.[ml]'`), plus `bitsandbytes` for the NF4 Qwen3-32B studies. Every study used a single 24 GB GPU (an RTX 3090).
 - The original runs used a Fedora-based `distrobox` container with a dedicated virtual environment. Nothing here depends on that setup.
 
