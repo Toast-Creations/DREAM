@@ -34,6 +34,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from _bootstrap import ROOT
+from dream_core.isotime import fromisoformat  # Python 3.10: accepts -0500 offsets
 from dream_core.ledger import release_source_hash
 from tempo import evsuite as S, kidconfgen as KG
 from tempo.kidconfdone import plan_sha256
@@ -76,7 +77,7 @@ def text_sha(text):
 
 def epoch(stamp):
     """Parse an ISO time; naive stamps (the worker's) are America/New_York local time."""
-    t = datetime.fromisoformat(stamp)
+    t = fromisoformat(stamp)
     if t.tzinfo is None:
         t = t.replace(tzinfo=NY)
     return t.timestamp()

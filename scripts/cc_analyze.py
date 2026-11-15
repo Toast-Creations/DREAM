@@ -15,6 +15,7 @@ import statistics
 from zoneinfo import ZoneInfo
 
 from _bootstrap import ROOT
+from dream_core.isotime import fromisoformat  # Python 3.10: accepts -0500 offsets
 from dream_core.ledger import release_source_hash
 from tempo import bounded_mean as BM, clarconfirm as CC, kidconfdone as KD
 import clar_analyze as CA
@@ -101,7 +102,7 @@ def epoch(value):
     """The runner's naive timestamps explicitly mean New York, never host local TZ."""
     if not isinstance(value, str):
         raise ValueError("timestamp must be text")
-    dt = datetime.fromisoformat(value)
+    dt = fromisoformat(value)
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=NY)
     return dt.timestamp()
@@ -382,7 +383,7 @@ def integrity(hub):
                 or type(deadline["deadline_epoch"]) not in (int, float)
                 or deadline["deadline_epoch"] - deadline["driver_start_epoch"] != 43200
                 or epoch(deadline["deadline_iso"]) != deadline["deadline_epoch"]
-                or datetime.fromisoformat(deadline["deadline_iso"]).tzinfo is None):
+                or fromisoformat(deadline["deadline_iso"]).tzinfo is None):
             raise ValueError("invalid deadline")
     except (ValueError, TypeError, KeyError):
         problems.append("deadline epoch/ISO/timezone policy missing or inconsistent")

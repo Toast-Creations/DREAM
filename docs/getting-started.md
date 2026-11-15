@@ -2,7 +2,8 @@
 
 ## Requirements
 
-- Python 3.11 or later (CI tests 3.11–3.13; the research ran on 3.12). The core logic has no dependencies.
+- Python 3.10 or later (CI tests 3.10–3.13; the research ran on 3.12). The core logic has no dependencies.
+- `pgrep` (the `procps` package) for the process-cleanup tests. If you run the tests inside a container, start it with an init process (for example `podman run --init` or `docker run --init`): without one, killed child processes linger as zombies and three cleanup tests fail.
 - For model runs: `torch`, `transformers`, `peft`, `safetensors` and `accelerate` (`pip install -e '.[ml]'`), plus `bitsandbytes` for the NF4 Qwen3-32B studies. Every study used a single 24 GB GPU (an RTX 3090).
 - The original runs used a Fedora-based `distrobox` container with a dedicated virtual environment. Nothing here depends on that setup.
 
