@@ -9,6 +9,11 @@ order procedure, and writes every output under --out (never inside the instrumen
 
   run_e1_pairwise.py --instrument .../judging/pairwise-v1 --tasks tasks_e1_24.json --lock steering_lock.json \
       --units qwen3-8b=DIR --units mistral-7b=DIR --out OUTDIR [--dry-run]
+  run_e1_pairwise.py --check-hub HUB --hub-model qwen3-8b|mistral-7b
+      Pre-generation check of a prepared hub against generation_pin.json and steering_lock.json: the confirm
+      stage config must equal the pinned config exactly, the hub task file must equal tasks_e1_24.json, the
+      model manifest revision and targeted vector must match, and (once the random-set stage has run) the nine
+      random directions must match the lock. Run it before any chain is generated; stop on any mismatch.
 
 Refuses to make any call unless: the instrument's frozen hashes verify and it is qualified; the task file, steering
 lock and analysis script match the hashes registered below; every model has a unit for all 24 tasks x 3 seeds x 4
@@ -30,8 +35,9 @@ HERE = Path(__file__).resolve().parent
 REGISTERED = {
     "tasks_e1_24.json": "bafe147e4cc3dceba64b978f5f2c5c8379d3ece7e14479e951919786488a641c",
     "steering_lock.json": "2361358bec3d8b2b4ee236f7cda9b6616b67cd2618a59f2c8a749915a65c18b2",
-    "analyze_e1_pairwise.py": "7331c6e5fcc711f8e89665951146d17ab738b54ae82cd7e71e1204e584fdfade",
+    "analyze_e1_pairwise.py": "7981fa9fdbc3492ac4fc41f4f81c2ae34b882906427d566ba8d4e4f63a811115",
     "pairwise-v1/SPEC.json": "9a4e7aedd12c087da1ebe9276e668bcf470ee639743c2c8647785a74c0dcb22e",
+    "generation_pin.json": "7166991a6d6005d1c8bd7bbe02be5caec2268615928c722819025e93334dec1b",
 }
 STEER, COMPARISONS = "targeted", ("strong_prompt", "high_temperature", "random")
 ARMS = (STEER,) + COMPARISONS
@@ -129,7 +135,52 @@ def build_pairs(mod, units_by_model, tasks, lock):
     return pairs, missing, problems, hold
 
 
+def check_hub(hub, model):
+    """Return a list of mismatches between a prepared hub and the generation pin / steering lock."""
+    check_registered(HERE / "generation_pin.json", "generation_pin.json")
+    check_registered(HERE / "steering_lock.json", "steering_lock.json")
+    check_registered(HERE / "tasks_e1_24.json", "tasks_e1_24.json")
+    pin = json.loads((HERE / "generation_pin.json").read_text())
+    lock = json.loads((HERE / "steering_lock.json").read_text())["models"][model]
+    tasks = json.loads((HERE / "tasks_e1_24.json").read_text())
+    run, bad = Path(hub) / "run", []
+    cfg_path = run / "inputs/configs/confirm.json"
+    if not cfg_path.exists() or json.loads(cfg_path.read_text()) != pin["expected_confirm_config"][model]:
+        bad.append("inputs/configs/confirm.json differs from the pinned confirm config")
+    data = run / "inputs/data/survival-confirm-tasks.jsonl"
+    rows = [json.loads(x) for x in data.read_text().splitlines() if x.strip()] if data.exists() else None
+    if rows != tasks:
+        bad.append("hub task file differs from tasks_e1_24.json")
+    man = run / "inputs/model-manifest.json"
+    if not man.exists() or json.loads(man.read_text()).get("revision") != pin["model_manifest_revision"][model]:
+        bad.append("model manifest revision differs from the pin")
+    vec = run / "inputs/vectors/decategorization-vector.json"
+    if not vec.exists() or sha(vec) != lock["targeted_vector_sha256"]:
+        bad.append("targeted vector missing or differs from the lock")
+    rs = run / "results/artifacts/random-set"
+    if rs.exists():
+        got = [sha(rs / f"random-direction-{i:02d}.json") if (rs / f"random-direction-{i:02d}.json").exists() else None
+               for i in range(9)]
+        if got != lock["random_vector_sha256"]:
+            bad.append("random-set directions differ from the lock")
+    else:
+        bad.append("random-set not built yet (re-run this check after the random-set stage, before chains)")
+    src = run / "project"
+    for rel, digest in pin["source"]["files_sha256"].items():
+        if not (src / rel).exists() or sha(src / rel) != digest:
+            bad.append(f"project/{rel} differs from the pinned 1.4.2 source")
+    return bad
+
+
 def main():
+    if "--check-hub" in sys.argv:
+        hp = argparse.ArgumentParser()
+        hp.add_argument("--check-hub", required=True, type=Path)
+        hp.add_argument("--hub-model", required=True, choices=["qwen3-8b", "mistral-7b"])
+        h = hp.parse_args()
+        bad = check_hub(h.check_hub, h.hub_model)
+        print("hub OK" if not bad else "HUB MISMATCH:\n  " + "\n  ".join(bad))
+        raise SystemExit(1 if bad else 0)
     ap = argparse.ArgumentParser()
     ap.add_argument("--instrument", required=True, type=Path)
     ap.add_argument("--tasks", default=HERE / "tasks_e1_24.json", type=Path)

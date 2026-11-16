@@ -1,0 +1,214 @@
+{
+ "_note": "E1 generation pin (PREREGISTRATION_E1_E5.md §9.1 item 6). Fresh E1 generation must use exactly this source, these tools and these stage configs. run_e1_pairwise.py --check-hub compares a prepared hub with this file before any chain is generated.",
+ "source": {
+  "directory": "Code/DREAM-project-1.4.2-extraction-fix-20261101",
+  "repository": "private DREAM-code repository",
+  "commit": "ee51aa869522a3226d3e429001558db13799cbd2",
+  "commit_on_origin_main": true,
+  "tree": "7a73f9b1cf26f5bb802c90803a4892ed73db60b9",
+  "equivalence": "Generation code (src/survival/runner.py, src/dream_core/modeling.py) is identical to 1.4.1, the Mistral pilot's source. Versus 1.4.0, the Qwen pilot's source, it differs only in dropping token_type_ids before generate() and in stopping on non-budget errors; extract.py carries the 1.4.2 extraction repair used for both pilots' extraction-v2.",
+  "files_sha256": {
+   "scripts/run_experiment.py": "87dc1408d9a0afc470b88687359f2eb8e1b9b5a3747611f3b0553583310c4908",
+   "scripts/build_random_set.py": "d4de4bc641d197e25bad11ff3273ddb45e967b1e3b128bf624dd808c13126eec",
+   "scripts/build_steering_vector.py": "8416a1666a5876195f35494a420f0f0d54734f5037dd71574d218f440adf9268",
+   "src/survival/runner.py": "9461e42c2d53057215f31a07a91c387eff5d41a6a762bae0b2003d51f77c65cc",
+   "src/survival/prompts.py": "698b7319847383ab14fcdee36f8b30291666c44f96dde7c5ce6b57201b2a752d",
+   "src/survival/config.py": "e2d240a71fc4211353ad202eb891e106aeebe6e76e542a38419f4a343356597a",
+   "src/survival/extract.py": "285df85360251be5df72c4aecfcc5d338d219bc279d38982ca67361d6a308755",
+   "src/dream_core/modeling.py": "f9340333bf0ef52e1e6656db3ac59e3008de8301c4485d0dbf797367ea7875e0",
+   "src/dream_core/steering.py": "0b1c160254d211a32f6325e6a5a856b8150e40e01bf8d50700df98aae03551bc",
+   "src/dream_core/schedules.py": "14b495def857ca2bbb82dbe0d61f2637533c360262b5da9e68ef6e58f1a22f35",
+   "configs/survival-pilot.json": "764575a5b3b618e8afd07886e0dd9292247e87c3d9be6f550bd7d5e21988efe4"
+  }
+ },
+ "orchestration": {
+  "directory": "Tools/Idea-Survival (local, not under version control; hashes pin it)",
+  "files_sha256": {
+   "prepare_run.py": "dcf44d47d6834ff1227e9c4328210c366f13f2b72b9eb40796c720b488c9e095",
+   "run_queue.py": "968ae3e0188a7522a9789f045d0ff4524d7c272c4a27cecbaf3bfd48214e58f0",
+   "check_extraction.py": "9fc987faa8b524b8d0b7c279f4c8f24cee3a2dd64ed4844b6955953900344aa7"
+  },
+  "commands": {
+   "qwen3-8b": "python3 Tools/Idea-Survival/prepare_run.py --model qwen3 --stages confirm --tasks docs/proposals/prereg/tasks_e1_24.jsonl --source Code/DREAM-project-1.4.2-extraction-fix-20261101 --name e1",
+   "mistral-7b": "python3 Tools/Idea-Survival/prepare_run.py --model mistral --stages confirm --tasks docs/proposals/prereg/tasks_e1_24.jsonl --source Code/DREAM-project-1.4.2-extraction-fix-20261101 --vector <mistral pilot hub>/run/results/artifacts/decategorization-vector.json --name e1",
+   "run": "python3 Tools/Idea-Survival/run_queue.py <hub> (random-set and fixtures before chains; extraction gate after the stage)"
+  }
+ },
+ "tasks": {
+  "json": "tasks_e1_24.json",
+  "json_sha256": "bafe147e4cc3dceba64b978f5f2c5c8379d3ece7e14479e951919786488a641c",
+  "jsonl": "tasks_e1_24.jsonl",
+  "jsonl_sha256": "d4ff29b2b35fcd8138b7686a53a714a03a97fc87c0a36ec568b15830ee54b549",
+  "hub_copy": "run/inputs/data/survival-confirm-tasks.jsonl"
+ },
+ "design": {
+  "arms": [
+   "strong_prompt",
+   "high_temperature",
+   "targeted",
+   "random"
+  ],
+  "seeds": [
+   11,
+   23,
+   47
+  ],
+  "tasks": 24,
+  "chains_per_model": 288,
+  "strong_prompt": "arm prompt text in src/survival/prompts.py (sha above); sampling T 0.6",
+  "high_temperature": "same prompt, T 1.3 at ideation only",
+  "targeted": "steering_lock.json, peak 0.2, cap 0.4, ideation only",
+  "random": "steering_lock.json, nine seeded directions (seeds 271828-271836)"
+ },
+ "expected_confirm_config": {
+  "qwen3-8b": {
+   "version": "1.4.0",
+   "experiment": "survival",
+   "phase": "test",
+   "_note": "Frozen confirmation stage; see confirmation-freeze package.",
+   "model": {
+    "path": "/model",
+    "manifest": "/inputs/model-manifest.json",
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "enable_thinking": false
+   },
+   "data_path": "/inputs/data/survival-confirm-tasks.jsonl",
+   "output_dir": "/results/runs/confirm",
+   "seeds": [
+    11,
+    23,
+    47
+   ],
+   "survival": {
+    "mode": "chains",
+    "arms": [
+     "strong_prompt",
+     "high_temperature",
+     "targeted",
+     "random"
+    ],
+    "order_seed": 20261031,
+    "workflow": "develop"
+   },
+   "generation": {
+    "temperature": 0.6,
+    "high_temperature": 1.3,
+    "top_p": 0.95,
+    "top_k": 20
+   },
+   "steering": {
+    "layer_index": -8,
+    "vector_path": "/inputs/vectors/decategorization-vector.json",
+    "random_vector_path": "/results/artifacts/random-qualify.json",
+    "random_set_dir": "/results/artifacts/random-set",
+    "random_count": 9,
+    "peak_strength": 0.2,
+    "max_abs_strength": 0.4,
+    "schedule": {
+     "shape": "smooth",
+     "onset_tokens": 50,
+     "plateau_tokens": 100,
+     "comedown_tokens": 200
+    }
+   },
+   "limits": {
+    "max_trials": 288,
+    "max_seconds": 86400,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 3072,
+    "max_worlds": 24,
+    "stage_input_tokens": {
+     "ideation": 4096,
+     "development": 8192,
+     "final": 12288
+    },
+    "external_retries": 1,
+    "loop_guard": {
+     "window_tokens": 1200,
+     "ngram": 16,
+     "repeat_share": 0.8,
+     "check_every": 16,
+     "_note": "V1.3.3 calibrated guard (doc 19); a loop is recorded as finish_reason=loop, never resampled."
+    }
+   }
+  },
+  "mistral-7b": {
+   "version": "1.4.0",
+   "experiment": "survival",
+   "phase": "test",
+   "_note": "Frozen confirmation stage; see confirmation-freeze package.",
+   "model": {
+    "path": "/model",
+    "manifest": "/inputs/model-manifest.json",
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "tokenizer_loader": "fast_json"
+   },
+   "data_path": "/inputs/data/survival-confirm-tasks.jsonl",
+   "output_dir": "/results/runs/confirm",
+   "seeds": [
+    11,
+    23,
+    47
+   ],
+   "survival": {
+    "mode": "chains",
+    "arms": [
+     "strong_prompt",
+     "high_temperature",
+     "targeted",
+     "random"
+    ],
+    "order_seed": 20261031,
+    "workflow": "develop"
+   },
+   "generation": {
+    "temperature": 0.6,
+    "high_temperature": 1.3,
+    "top_p": 0.95,
+    "top_k": 20
+   },
+   "steering": {
+    "layer_index": -8,
+    "vector_path": "/inputs/vectors/decategorization-vector.json",
+    "random_vector_path": "/results/artifacts/random-qualify.json",
+    "random_set_dir": "/results/artifacts/random-set",
+    "random_count": 9,
+    "peak_strength": 0.2,
+    "max_abs_strength": 0.4,
+    "schedule": {
+     "shape": "smooth",
+     "onset_tokens": 50,
+     "plateau_tokens": 100,
+     "comedown_tokens": 200
+    }
+   },
+   "limits": {
+    "max_trials": 288,
+    "max_seconds": 86400,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 3072,
+    "max_worlds": 24,
+    "stage_input_tokens": {
+     "ideation": 4096,
+     "development": 8192,
+     "final": 12288
+    },
+    "external_retries": 1,
+    "loop_guard": {
+     "window_tokens": 1200,
+     "ngram": 16,
+     "repeat_share": 0.8,
+     "check_every": 16,
+     "_note": "V1.3.3 calibrated guard (doc 19); a loop is recorded as finish_reason=loop, never resampled."
+    }
+   }
+  }
+ },
+ "model_manifest_revision": {
+  "qwen3-8b": "b968826d9c46dd6066d109eabc6255188de91218",
+  "mistral-7b": "c170c708c41dac9275d15a8fff4eca08d52bab71"
+ },
+ "public_repo_base_commit": "0b0358b356034ea4b2e9d0eb9bb4c8f438be809e"
+}
