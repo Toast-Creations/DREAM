@@ -1,0 +1,338 @@
+[
+ {
+  "id": "e1-conf-01",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "plastic bread-bag clip",
+  "description": "A thin, flat square of stiff plastic with a narrow slot cut into one side.",
+  "prompt": "Give five unusual but workable uses for an ordinary plastic bread-bag clip in an office with many cables and shared desks, beyond closing a bag. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond closing a bag",
+   "Ordinary small materials and no powered electronics",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-02",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "foam pool noodle",
+  "description": "A long, hollow, flexible tube of closed-cell foam that floats and can be cut with scissors.",
+  "prompt": "Give five unusual but workable uses for an ordinary foam pool noodle in a community theatre's backstage area, beyond floating in a pool. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond floating in a pool",
+   "Ordinary small materials and no powered electronics",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-03",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "mesh produce bag",
+  "description": "A small drawstring bag of fine, stretchy nylon mesh that lets air and water pass through.",
+  "prompt": "Give five unusual but workable uses for an ordinary mesh produce bag in a school's outdoor nature club, beyond carrying fruit and vegetables. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond carrying fruit and vegetables",
+   "Ordinary small materials and nothing that harms plants or animals",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-04",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "pair of wooden chopsticks",
+  "description": "Two slim, tapered sticks of untreated wood, light and easy to snap or carve.",
+  "prompt": "Give five unusual but workable uses for an ordinary pair of wooden chopsticks in a small apartment kitchen garden on a windowsill, beyond eating. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond eating",
+   "Ordinary small materials and no powered electronics",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-05",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "aluminium pie dish",
+  "description": "A thin, shallow, disposable aluminium dish that bends by hand and reflects light and heat.",
+  "prompt": "Give five unusual but workable uses for an ordinary aluminium pie dish on a weekend campsite without a car nearby, beyond baking a pie. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond baking a pie",
+   "Ordinary small materials and nothing that relies on a shop",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-06",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "plastic bottle cap",
+  "description": "A small, rigid screw-on cap with a ridged rim and a flat inner surface.",
+  "prompt": "Give five unusual but workable uses for an ordinary plastic bottle cap in a board-game club that meets in a library, beyond closing a bottle. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond closing a bottle",
+   "Ordinary small materials, no glue that damages library property",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-07",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "paper drinking straw",
+  "description": "A thin tube of rolled, glued paper that softens slowly when wet.",
+  "prompt": "Give five unusual but workable uses for an ordinary paper drinking straw in a children's craft session at a museum, beyond drinking. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond drinking",
+   "Ordinary small materials, no heat sources and safe for children",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-08",
+  "split": "confirmation",
+  "family": "practical",
+  "subject": "wire coat hanger",
+  "description": "A bent loop of thin steel wire with a twisted neck and a hook, easily reshaped by hand.",
+  "prompt": "Give five unusual but workable uses for an ordinary wire coat hanger in a shared community workshop for bicycle repairs, beyond hanging clothes. For each idea, explain which physical property makes it work and the small additional materials it would need. Keep the uses distinct. A proposed use should be understandable without a drawing.",
+  "quality_constraints": [
+   "Beyond hanging clothes",
+   "Ordinary small materials and no powered tools",
+   "Five distinct uses tied to specific properties",
+   "Workable in the stated setting"
+  ]
+ },
+ {
+  "id": "e1-conf-09",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "keystone arch",
+  "description": "A curved stone arch whose wedge-shaped central top stone locks the others in place; it needs temporary support until that stone is set.",
+  "prompt": "Develop five structural analogies between a keystone arch and how a small volunteer project holds together. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a project is literally made of stone.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-10",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "beaver dam",
+  "description": "A structure of branches, mud and stones that beavers build and repair to hold back a stream and form a pond.",
+  "prompt": "Develop five structural analogies between a beaver dam and how a household budget is managed over a year. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a budget is literally a river.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-11",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "pipe organ",
+  "description": "A keyboard instrument that sends pressurised air through ranks of pipes; stops choose which ranks sound.",
+  "prompt": "Develop five structural analogies between a pipe organ and how a hospital coordinates its departments. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a hospital is literally an instrument.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-12",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "dry-stone wall",
+  "description": "A wall built from stones fitted together without mortar; it stands by weight and careful placement and can be repaired stone by stone.",
+  "prompt": "Develop five structural analogies between a dry-stone wall and how a person builds a reputation. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a reputation is literally made of stones.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-13",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "water tower",
+  "description": "An elevated tank that is filled when demand is low and uses gravity to keep water pressure steady when demand is high.",
+  "prompt": "Develop five structural analogies between a water tower and how a person manages their energy through a week. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a person literally stores water.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-14",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "mangrove forest",
+  "description": "Salt-tolerant trees whose tangled roots grow in tidal water, slowing waves and trapping sediment along a coast.",
+  "prompt": "Develop five structural analogies between a mangrove forest and how an online community handles conflict. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a community is literally a forest.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-15",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "earthen levee",
+  "description": "A raised bank of packed soil along a river that keeps floodwater out of nearby land until the water rises too high.",
+  "prompt": "Develop five structural analogies between an earthen levee and how a school protects time for learning. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a school is literally beside a river.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-16",
+  "split": "confirmation",
+  "family": "analogy",
+  "subject": "ship's keel",
+  "description": "The structural spine along the bottom of a hull that resists sideways drift and keeps the ship upright.",
+  "prompt": "Develop five structural analogies between a ship's keel and how a family keeps its traditions through change. Each analogy should use a different relationship, not simply rename one thing as the other. Explain what maps to what, give a small example, and name one limit of the analogy. The goal is an informative connection, not a claim that a family is literally a ship.",
+  "quality_constraints": [
+   "Explicit structural mapping",
+   "Different relationships across proposals",
+   "One concrete example per proposal",
+   "One meaningful limitation per analogy"
+  ]
+ },
+ {
+  "id": "e1-conf-17",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "matchbox",
+  "description": "A small sliding cardboard box of wooden matches with a rough striking strip on its side.",
+  "prompt": "Invent five distinct short-story premises in which a matchbox changes how a character finds the courage to speak up. Each premise must use a particular property of the matchbox and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Matchbox has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ },
+ {
+  "id": "e1-conf-18",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "manual typewriter",
+  "description": "A mechanical writing machine whose keys strike an inked ribbon; every letter is permanent and mistakes must be crossed out.",
+  "prompt": "Invent five distinct short-story premises in which a manual typewriter changes how a character apologises to someone they hurt. Each premise must use a particular property of the manual typewriter and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Manual typewriter has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ },
+ {
+  "id": "e1-conf-19",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "music box",
+  "description": "A small box with a wind-up cylinder that plucks a metal comb to play one short tune when the lid is opened.",
+  "prompt": "Invent five distinct short-story premises in which a music box changes how a character remembers a place they left. Each premise must use a particular property of the music box and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Music box has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ },
+ {
+  "id": "e1-conf-20",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "weather vane",
+  "description": "A metal figure on a rooftop pivot that turns to point into the wind.",
+  "prompt": "Invent five distinct short-story premises in which a weather vane changes how a character decides whether to leave home. Each premise must use a particular property of the weather vane and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Weather vane has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ },
+ {
+  "id": "e1-conf-21",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "paper boat",
+  "description": "A small boat folded from a single sheet of paper; it floats until the paper soaks through.",
+  "prompt": "Invent five distinct short-story premises in which a paper boat changes how a character lets go of a grudge. Each premise must use a particular property of the paper boat and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Paper boat has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ },
+ {
+  "id": "e1-conf-22",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "hand mirror",
+  "description": "A small mirror with a handle, held close so that only part of a face or a room is visible at once.",
+  "prompt": "Invent five distinct short-story premises in which a hand mirror changes how a character sees a stranger who needs help. Each premise must use a particular property of the hand mirror and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Hand mirror has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ },
+ {
+  "id": "e1-conf-23",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "train timetable",
+  "description": "A printed table of departure and arrival times, with footnotes for exceptions and seasonal changes.",
+  "prompt": "Invent five distinct short-story premises in which a train timetable changes how a character keeps or breaks a promise. Each premise must use a particular property of the train timetable and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Train timetable has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ },
+ {
+  "id": "e1-conf-24",
+  "split": "confirmation",
+  "family": "artistic",
+  "subject": "sewing kit",
+  "description": "A small case of needles, thread, pins and spare buttons, used for quick repairs.",
+  "prompt": "Invent five distinct short-story premises in which a sewing kit changes how a character learns to be patient. Each premise must use a particular property of the sewing kit and explain how it changes the character's choices. Metaphor and magic are welcome. If a premise uses magic, give it one consistent rule and a consequence. Literal real-world feasibility is not required.",
+  "quality_constraints": [
+   "Sewing kit has a substantive role",
+   "Different story mechanisms or conflicts",
+   "A meaningful effect on character choices",
+   "Magic, if used, follows a consistent rule"
+  ]
+ }
+]

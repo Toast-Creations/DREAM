@@ -2,9 +2,9 @@
 
 *DREAM3 · prospective analysis specification*
 
-> **Status: written 16 November 2026, before any fresh run exists.** No confirmation or full-run generation has been made for Qwen3-8B or Mistral-7B. Both main hubs completed only `smoke`/`devqual`/`pilot` (`COMPLETE.json`, 1 November 2026). This file becomes binding only when the open items in Section 9 are filled and its SHA-256 is published with a timestamp. As [E1](E1.md) says, a local freeze is not a public preregistration.
+> **Status: written 16 November 2026, before any fresh run exists.** No confirmation or full-run generation has been made for Qwen3-8B or Mistral-7B. Both main hubs completed only `smoke`/`devqual`/`pilot` (`COMPLETE.json`, 1 November 2026). Section 9 records the author's decisions of 16 November 2026 and the artefact hashes. The file becomes binding when the items still open in Section 9.2 are closed and its SHA-256 is published with a timestamp. As [E1](E1.md) says, a local freeze is not a public preregistration.
 
-David Cook · 16 November 2026 · Preregistration draft v1.0
+David Cook · 16 November 2026 · Preregistration draft v1.1 (v1.0 had §9 as open items only)
 
 ## 1. Prospective hold rule
 
@@ -45,7 +45,7 @@ If any of these files differs at run time, the run falls outside this plan. Re-q
 - **Corroborating test:** a two-sided exact sign test over tasks with a non-zero score.
 - **Order-adjusted Bradley–Terry model:** strengths for C, A, B and D, with steering fixed at 0, plus one presentation-position parameter. Ties count as half wins. The model is fitted on call-level games. It is reported as an estimate and is not a decision test. Only steering-vs-comparison games are played, so baseline-vs-baseline gaps are inferred through C.
 - **Decision rule (E1):** an added-value claim for a model requires **both** C−A and C−B to be positive with permutation p < 0.05. This is an intersection–union rule, so no adjustment is applied within a model. Across the two models, a Holm adjustment is applied to each contrast. C−D is a direction-specificity check and is not part of the claim.
-- **Smallest effect of interest:** see Section 9. Precision is judged relative to it. An interval that includes zero is reported as inconclusive, not as a null.
+- **Smallest effect of interest (SESOI):** a net preference of **+0.25**, which is a tie-adjusted win share of (1 + 0.25) / 2 = **0.625** (Section 9.1). Precision is judged relative to it. The analysis reports whether the interval excludes zero, includes the SESOI, or rules it out (upper bound below +0.25). An interval that includes zero is reported as inconclusive, not as a null.
 
 ## 5. Recency diagnostic guardrail
 
@@ -61,7 +61,7 @@ For every run, and separately for each model × contrast, the analysis reports t
 2. **Lineage survival attribution:** each final member is rated with the frozen **scope-v5c lineage prompt**, the one that scored 8/8 on its lineage traps. Its files are `package/prompts/lineage_system_prompt.txt` (`0d8218ecf2ace42abcf3e0216ba9c6829c58dc55bf0897e1c537de24c0e64730`) and `package/schemas/lineage_schema.json` (`2009d7a7875888c2aa2b71ee9597a57f52f4fdead670192a1e9868150e8afbf6`), read from the frozen `judging/scope-v5c/` directory and never copied or edited there. Results are written elsewhere.
    - The analysis reports, by arm, the share of finals rated faithful development or productive reinterpretation. It also reports, among C's Useful Originality pair wins, the share whose steering final is source-linked rather than an unrelated replacement.
    - **Limits:** scope-v5c *failed* its overall qualification. Only its lineage gate passed, on 8 traps authored inside this project. The prompt has never been run on pilot outputs. These lineage results are therefore secondary and descriptive.
-3. **Process outcomes:** completion, delivery, duplicates, unrelated replacements, tokens and runtime for each arm, as listed in E1.
+3. **Process outcomes:** completion, delivery, duplicates, unrelated replacements, tokens and runtime for each arm, as listed in E1. These come from the generation run records, not from the pairwise analysis script.
 
 ## 7. Mapping to E2–E5
 
@@ -73,18 +73,58 @@ For every run, and separately for each model × contrast, the analysis reports t
 
 ## 8. Data handling and analysis code
 
-- Before any judge call on fresh data, write the analysis script, record its SHA-256 in this file and leave it unchanged. It computes Sections 3–6 exactly as written.
+- The analysis script and driver are hashed in Section 9.1 and must not change. The analysis computes Sections 3–6 exactly as written.
 - Failed calls follow the frozen runner's retry policy.
 - A pair missing either order is left out of the primary analysis and reported, with no replacement or imputation. Generation failures stay outcomes.
 - The arm key stays sealed until every call is complete. All raw replies, logs and deviations are released.
 
-## 9. Open items before this plan is binding
+## 9. Decisions and registered artefacts
 
-These need the author's decision. Until they are filled, this file is a draft.
+### 9.1. Decisions (author, 16 November 2026)
 
-1. **Smallest effect of interest** for the net preference. The 0.5 qualifying ideas in E1 refers to a different scale, so it does not carry over.
-2. **Endpoint amendment.** E1's candidate primary endpoint was qualifying surviving ideas rated by **two** independently qualified judge families. This plan replaces it with a **single-family** pairwise endpoint, and the qualification fixtures were authored by the same model family that judges. Claims will be worded as "AI-judged pairwise preference (one family)". The amendment needs confirming.
-3. **E4 ordering.** The proposals index lists E4 as the first dependency of E1–E3. Running E1 under this plan first means no human validation of the endpoint has been done yet. This should be either confirmed or reordered.
-4. **Intervention.** The [proposals index](README.md) notes that later screens found no evidence that the steering decategorizes. Before the fresh runs, it must be confirmed that arm C is still the targeted steering from the pilots.
-5. **Task set and allocation.** E1 plans 24 new tasks (8 constrained design, 8 relational analogy, 8 artistic) × 3 seeds × 4 arms. The task identities and hashes must be registered.
-6. **Analysis-script hash** (Section 8) and the **public timestamp** for this file's SHA-256.
+Details marked † were filled in by Claude while implementing these decisions and need the author's confirmation.
+
+1. **SESOI = +0.25 net preference**, which is a 0.625 tie-adjusted win share. It applies to the primary endpoint for each model × contrast (Section 4).
+2. **Judge.** The primary judge is single-family: `claude-opus-5-5`, through pairwise-v1 exactly as frozen (Section 2). E1's two-family endpoint is amended to this, and claims are worded as "AI-judged pairwise preference (one judge family)".
+   - **Fixture provenance (disclosed):** the qualification fixture `qual_24.json` was authored by the same model that judges (`claude-opus-5-5`). Its anchors are author-specified and are not external human norms.
+   - **Cross-family audit:** a deterministic 20% of confirmatory pairs is re-judged in both orders by a second judge family († the Codex CLI, OpenAI family; exact model and version recorded at run time). It uses the same frozen prompt and schema. Selection: rank pair IDs by `sha256("e1-cross-family-audit-v1|" + pair_id)` and take the first ⌈0.2·N⌉ (44 of 216 per model). The analysis reports sign agreement, exact pair-score agreement and both judges' net preference on that subset. † The audit is a **disclosed diagnostic** and does not change the primary result. No agreement threshold is set.
+3. **E4 before unblinding.** A human-calibration check under E4 must be completed before any arm-level E1 confirmatory result is computed or read. Judge calls may run before then, because the judge sees only masked pairs. `analyze_e1_pairwise.py` refuses confirmatory output unless it is given a completed E4 record (`"completed": true`), and it hashes that record into the summary.
+4. **Steering arm locked to the pilot.** Arms C (targeted) and D (random) are identical to the 1 November pilots, as recorded in `prereg/steering_lock.json`:
+   - ideation only, layer −8;
+   - **peak strength 0.2**, absolute cap 0.4;
+   - smooth schedule 50/100/200 tokens;
+   - the same per-model targeted vector and nine random directions, by SHA-256;
+   - the same sampling (T 0.6, high-temperature arm 1.3 at ideation, top-p 0.95, top-k 20, thinking off).
+
+   The request said "+0.40". The pilots ran at a peak of 0.2, and 0.4 was only the cap (pilot configs and per-call records), so the lock follows the pilot. The driver checks every fresh unit against the lock and refuses to judge on any mismatch.
+5. **Task set.** `prereg/tasks_e1_24.json` holds 24 new tasks: 8 practical, 8 analogy and 8 artistic, in the pilot task schema (`split: confirmation`). With 3 seeds and 4 arms this gives 288 chains per model, 216 pairs per model and 864 calls in all. Subjects were checked against, and do not appear as subjects in:
+   - the pilot, smoke and devqual tasks;
+   - the unused 31 October confirmation sets (`materials/confirmation/tasks-v1/v2.jsonl`);
+   - the diagnostics;
+   - the qualification fixtures of scoped-v4/v5, scope-v5b, scope-v5c and pairwise-v1;
+   - the public repo's task data.
+
+   They were written by Claude, the same family as the judge. † The earlier `tasks-v2` set (sha `bcc9497a…`, never given to a generator) is not used.
+6. **Scripts.** The frozen evaluation files are those in Section 2 (unchanged). New files are listed below. The driver imports the frozen runner's judge functions read-only, because the frozen runner hard-codes the pilot paths and two baselines.
+
+| File | SHA-256 | Role |
+| --- | --- | --- |
+| `judging/pairwise-v1/SPEC.json` | `9a4e7aedd12c087da1ebe9276e668bcf470ee639743c2c8647785a74c0dcb22e` | frozen instrument spec (hashes in Section 2) |
+| `judging/pairwise-v1/scripts/run_pairwise_v1.py` | `225728ff8040fb3d037e9f88ff53a2a3bc13afcaf72fc52852419abd65625c96` | frozen judge runner |
+| `prereg/analyze_e1_pairwise.py` | `7331c6e5fcc711f8e89665951146d17ab738b54ae82cd7e71e1204e584fdfade` | preregistered analysis (Sections 3–6) |
+| `prereg/run_e1_pairwise.py` | `ba1ae199817e11fe5d8292a9da80085bfde4a59cbf0e41f227bc5c1326c95c5b` | E1 driver; embeds the analysis, task, lock and SPEC hashes |
+| `prereg/tasks_e1_24.json` | `bafe147e4cc3dceba64b978f5f2c5c8379d3ece7e14479e951919786488a641c` | E1 task set |
+| `prereg/steering_lock.json` | `2361358bec3d8b2b4ee236f7cda9b6616b67cd2618a59f2c8a749915a65c18b2` | arm C/D and sampling lock |
+
+**Script checks (16 November 2026, no model calls).**
+- On the already-seen pilot pairs, run with `--exploratory`, the analysis reproduces the pilot report's pair-level W/T/L and its 14 hard flips. Its order-adjusted Bradley–Terry gives pooled −0.23 (high temperature) and −0.35 (strong prompt), against −0.22 and −0.34 unadjusted, with a position-A term of −0.40.
+- The exact permutation p matches brute-force enumeration.
+- The driver reproduces the frozen pilot builder's 72 pairs and their presentation orders. It refuses pilot tasks by hash, refuses output inside the instrument directory, and flagged all 72 steered pilot units against a lock with a peak of 0.4.
+
+### 9.2. Still open
+
+1. **Cross-family audit runner.** It is not yet written, so its hash is pending.
+2. **Lineage runner for the scope-v5c prompt** (Section 6.2). It is not yet written, so its hash is pending. The analysis already accepts its output (`--lineage`).
+3. **E4 human-calibration check.** Its content, sample and pass criterion are not yet defined, and neither is the record format beyond `"completed": true`.
+4. **Generation source for the fresh runs.** The code version and the run-hub configuration, which must carry `steering_lock.json` exactly.
+5. **Public timestamp** for this file's SHA-256.

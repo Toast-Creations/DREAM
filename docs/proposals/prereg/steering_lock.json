@@ -1,0 +1,60 @@
+{
+ "_note": "Arm C (targeted) and arm D (random) locked identical to the 1 November 2026 idea-survival pilots (config survival-pilot.json, source 1.4.x). The pilot ran at peak_strength 0.2 with max_abs_strength 0.4 as a cap; no pilot ran at a peak of 0.4. Values were read from the pilot run configs and from the per-call steering records in output/extraction-v2/pilot-*/units.",
+ "steered_stage": "ideation",
+ "unsteered_stages": [
+  "development",
+  "final"
+ ],
+ "layer_index": -8,
+ "peak_strength": 0.2,
+ "max_abs_strength": 0.4,
+ "schedule": {
+  "shape": "smooth",
+  "onset_tokens": 50,
+  "plateau_tokens": 100,
+  "comedown_tokens": 200
+ },
+ "generation": {
+  "temperature": 0.6,
+  "high_temperature": 1.3,
+  "top_p": 0.95,
+  "top_k": 20,
+  "enable_thinking": false
+ },
+ "models": {
+  "qwen3-8b": {
+   "model_id": "Qwen/Qwen3-8B",
+   "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+   "pilot_config_sha256": "d19f4f4d35254aba79e19a5404e8e61db12093097264bf9eb22ed34f16eb12d0",
+   "targeted_vector_sha256": "df39628deef86c261eda123981fb201a1c4a9545d644140983dea2cc35c325c7",
+   "random_vector_sha256": [
+    "bed2d9b935b13b6057f20675c1372a0d0e2a1c5fb1ab790ca96ef639d67df82d",
+    "bb31e9504396d4f4208bbedaf943dc72d31731c6eff23be7446e0a541590b3e8",
+    "feee4583f4ccd74c7f37fbf38e9d5fa1ca09a7f8fa6912711ef794b0c1ae41b2",
+    "00e595e58c57438176daa580d3247530861a61a1dac269b63ed250cb73c24cd3",
+    "ce9b1d5d5c59d2db0b027eaad563dc4055ce745586114e199adb3a961056ecfc",
+    "c63b25abbacdc758240c7464f0d736387b73db127cbd63f1e89d3a46731a1912",
+    "48af36aa31bf124202a4328037d2df9d66a2ab150d7812342ede2da559305a84",
+    "71d0a12870160a8ec985aaca3d8514ad351977f597b020340ee1fa6ef23e2768",
+    "d37aa38d8748149ffe786d9e8174f214f00f520cb8ca68ef196048e2fcacf2fe"
+   ]
+  },
+  "mistral-7b": {
+   "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+   "model_revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+   "pilot_config_sha256": "8aff0c47278f6e9444bce3548566295bcc40916108905857833332e58a3e3716",
+   "targeted_vector_sha256": "f2b58d63f80e88b4595bc5f5c84f5ef1a859fcce82294880dd4fdfabc370eff6",
+   "random_vector_sha256": [
+    "5c43a23be04e81aa940cdc543804dcfba446bdd466c21087541c24c2c46a4a85",
+    "7378e566dc00c1975faf62ece121743bd9384111a9b8739e540980b0a45401f7",
+    "6ec2e2ab4a2790b2abe99c3ff2f8e0ed39b89758310da5a35ff08fff867337e3",
+    "6692bbf6c6a5829e9bbcc39d8b4e6127530da9734921070001f8552c36b2eb44",
+    "34db957c64829eb9fe1f6b05343ce18db036c3d8f2bd1bb2ff8fb7d6b4f13969",
+    "84e228f19a13bdfd50dbfac6dbd28a47241f9f78506b042db25f109934a84b63",
+    "2fec37471149f445e1fda5155079bc038142d6257db081b4930593c8fdc39d71",
+    "34f8e93f6fd7ad0c2cee0339c436b75f88c72d84eb930546353b64b70c0d60ce",
+    "aa6f980d5b77ca39cf2d5f8afafbd60bc9e77b3a41eff563f4751711c87cd063"
+   ]
+  }
+ }
+}
