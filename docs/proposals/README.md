@@ -11,6 +11,8 @@ These six two-page proposals were written on 1 November 2026, after the idea-sur
 | [E5](E5.md) | Predict Before Scaling Up: a held-out larger-model forecast | E2 |
 | [E6](E6.md) | What Persists When the Identity Cue Is Gone? Identity imprinting | DREAM2 line |
 
+The [prospective analysis plan for E1–E5](PREREGISTRATION_E1_E5.md) (16 November 2026, draft until its open items are settled) fixes the confirmatory endpoint before any fresh run.
+
 The [evidence update of 1 November 2026](DREAM3-evidence-update-2026-11-01.md) records what the saved data showed when these proposals were written.
 
 **Later evidence.** The direction screens and the categorization check that followed (see [the creativity line](../lines/creativity.md)) found no evidence that the steering decategorizes. E1–E3 and E5 assume a steering intervention worth scaling. Before any of them is run, it needs to be reconsidered, for example by using a different intervention or by running E4's measurement work on its own.
