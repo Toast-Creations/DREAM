@@ -33,11 +33,11 @@ sys.dont_write_bytecode = True          # importing the frozen runner must not w
 
 HERE = Path(__file__).resolve().parent
 REGISTERED = {
-    "tasks_e1_24.json": "bafe147e4cc3dceba64b978f5f2c5c8379d3ece7e14479e951919786488a641c",
+    "tasks_e1_24.json": "1ed8ab1a99c7d1740004003c0d33a99523ba352359a781b041c48dda08b7a240",
     "steering_lock.json": "2361358bec3d8b2b4ee236f7cda9b6616b67cd2618a59f2c8a749915a65c18b2",
     "analyze_e1_pairwise.py": "7981fa9fdbc3492ac4fc41f4f81c2ae34b882906427d566ba8d4e4f63a811115",
     "pairwise-v1/SPEC.json": "9a4e7aedd12c087da1ebe9276e668bcf470ee639743c2c8647785a74c0dcb22e",
-    "generation_pin.json": "7166991a6d6005d1c8bd7bbe02be5caec2268615928c722819025e93334dec1b",
+    "generation_pin.json": "1e3c4e865491a3fe207b97b1a2614be2b736179c958785c888d0bd68c0690f85",
 }
 STEER, COMPARISONS = "targeted", ("strong_prompt", "high_temperature", "random")
 ARMS = (STEER,) + COMPARISONS

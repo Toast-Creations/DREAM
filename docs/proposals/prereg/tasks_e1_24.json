@@ -1,7 +1,7 @@
 [
  {
   "id": "e1-conf-01",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "plastic bread-bag clip",
   "description": "A thin, flat square of stiff plastic with a narrow slot cut into one side.",
@@ -15,7 +15,7 @@
  },
  {
   "id": "e1-conf-02",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "foam pool noodle",
   "description": "A long, hollow, flexible tube of closed-cell foam that floats and can be cut with scissors.",
@@ -29,7 +29,7 @@
  },
  {
   "id": "e1-conf-03",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "mesh produce bag",
   "description": "A small drawstring bag of fine, stretchy nylon mesh that lets air and water pass through.",
@@ -43,7 +43,7 @@
  },
  {
   "id": "e1-conf-04",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "pair of wooden chopsticks",
   "description": "Two slim, tapered sticks of untreated wood, light and easy to snap or carve.",
@@ -57,7 +57,7 @@
  },
  {
   "id": "e1-conf-05",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "aluminium pie dish",
   "description": "A thin, shallow, disposable aluminium dish that bends by hand and reflects light and heat.",
@@ -71,7 +71,7 @@
  },
  {
   "id": "e1-conf-06",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "plastic bottle cap",
   "description": "A small, rigid screw-on cap with a ridged rim and a flat inner surface.",
@@ -85,7 +85,7 @@
  },
  {
   "id": "e1-conf-07",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "paper drinking straw",
   "description": "A thin tube of rolled, glued paper that softens slowly when wet.",
@@ -99,7 +99,7 @@
  },
  {
   "id": "e1-conf-08",
-  "split": "confirmation",
+  "split": "test",
   "family": "practical",
   "subject": "wire coat hanger",
   "description": "A bent loop of thin steel wire with a twisted neck and a hook, easily reshaped by hand.",
@@ -113,7 +113,7 @@
  },
  {
   "id": "e1-conf-09",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "keystone arch",
   "description": "A curved stone arch whose wedge-shaped central top stone locks the others in place; it needs temporary support until that stone is set.",
@@ -127,7 +127,7 @@
  },
  {
   "id": "e1-conf-10",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "beaver dam",
   "description": "A structure of branches, mud and stones that beavers build and repair to hold back a stream and form a pond.",
@@ -141,7 +141,7 @@
  },
  {
   "id": "e1-conf-11",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "pipe organ",
   "description": "A keyboard instrument that sends pressurised air through ranks of pipes; stops choose which ranks sound.",
@@ -155,7 +155,7 @@
  },
  {
   "id": "e1-conf-12",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "dry-stone wall",
   "description": "A wall built from stones fitted together without mortar; it stands by weight and careful placement and can be repaired stone by stone.",
@@ -169,7 +169,7 @@
  },
  {
   "id": "e1-conf-13",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "water tower",
   "description": "An elevated tank that is filled when demand is low and uses gravity to keep water pressure steady when demand is high.",
@@ -183,7 +183,7 @@
  },
  {
   "id": "e1-conf-14",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "mangrove forest",
   "description": "Salt-tolerant trees whose tangled roots grow in tidal water, slowing waves and trapping sediment along a coast.",
@@ -197,7 +197,7 @@
  },
  {
   "id": "e1-conf-15",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "earthen levee",
   "description": "A raised bank of packed soil along a river that keeps floodwater out of nearby land until the water rises too high.",
@@ -211,7 +211,7 @@
  },
  {
   "id": "e1-conf-16",
-  "split": "confirmation",
+  "split": "test",
   "family": "analogy",
   "subject": "ship's keel",
   "description": "The structural spine along the bottom of a hull that resists sideways drift and keeps the ship upright.",
@@ -225,7 +225,7 @@
  },
  {
   "id": "e1-conf-17",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "matchbox",
   "description": "A small sliding cardboard box of wooden matches with a rough striking strip on its side.",
@@ -239,7 +239,7 @@
  },
  {
   "id": "e1-conf-18",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "manual typewriter",
   "description": "A mechanical writing machine whose keys strike an inked ribbon; every letter is permanent and mistakes must be crossed out.",
@@ -253,7 +253,7 @@
  },
  {
   "id": "e1-conf-19",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "music box",
   "description": "A small box with a wind-up cylinder that plucks a metal comb to play one short tune when the lid is opened.",
@@ -267,7 +267,7 @@
  },
  {
   "id": "e1-conf-20",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "weather vane",
   "description": "A metal figure on a rooftop pivot that turns to point into the wind.",
@@ -281,7 +281,7 @@
  },
  {
   "id": "e1-conf-21",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "paper boat",
   "description": "A small boat folded from a single sheet of paper; it floats until the paper soaks through.",
@@ -295,7 +295,7 @@
  },
  {
   "id": "e1-conf-22",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "hand mirror",
   "description": "A small mirror with a handle, held close so that only part of a face or a room is visible at once.",
@@ -309,7 +309,7 @@
  },
  {
   "id": "e1-conf-23",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "train timetable",
   "description": "A printed table of departure and arrival times, with footnotes for exceptions and seasonal changes.",
@@ -323,7 +323,7 @@
  },
  {
   "id": "e1-conf-24",
-  "split": "confirmation",
+  "split": "test",
   "family": "artistic",
   "subject": "sewing kit",
   "description": "A small case of needles, thread, pins and spare buttons, used for quick repairs.",

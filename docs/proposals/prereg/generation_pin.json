@@ -36,9 +36,9 @@
  },
  "tasks": {
   "json": "tasks_e1_24.json",
-  "json_sha256": "bafe147e4cc3dceba64b978f5f2c5c8379d3ece7e14479e951919786488a641c",
+  "json_sha256": "1ed8ab1a99c7d1740004003c0d33a99523ba352359a781b041c48dda08b7a240",
   "jsonl": "tasks_e1_24.jsonl",
-  "jsonl_sha256": "d4ff29b2b35fcd8138b7686a53a714a03a97fc87c0a36ec568b15830ee54b549",
+  "jsonl_sha256": "a296738662de76992c548af7b305a4b5d5142be5251e15a5a09bf6e6a4a4e978",
   "hub_copy": "run/inputs/data/survival-confirm-tasks.jsonl"
  },
  "design": {

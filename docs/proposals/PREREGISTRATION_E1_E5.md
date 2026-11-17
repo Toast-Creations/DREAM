@@ -2,9 +2,9 @@
 
 *DREAM3 · prospective analysis specification*
 
-> **Status: written 16 November 2026, before any fresh run exists.** No confirmation or full-run generation has been made for Qwen3-8B or Mistral-7B. Both main hubs completed only `smoke`/`devqual`/`pilot` (`COMPLETE.json`, 1 November 2026). Section 9 records the author's decisions of 16 November 2026 and the artefact hashes; all items are closed. The file is binding from its public push to GitHub (branch `proposals-refs-prereg-20261116`), which is its timestamp, and that push precedes any fresh generation. As [E1](E1.md) says, a local freeze is not a public preregistration.
+> **Status: written 16 November 2026, before any fresh run exists; amended 17 November 2026 (Section 10), still before any generation.** No confirmation or full-run generation has been made for Qwen3-8B or Mistral-7B. Both main hubs completed only `smoke`/`devqual`/`pilot` (`COMPLETE.json`, 1 November 2026). Section 9 records the author's decisions of 16 November 2026 and the artefact hashes; all items are closed. The file is binding from its public push to GitHub (branch `proposals-refs-prereg-20261116`), which is its timestamp, and that push precedes any fresh generation. As [E1](E1.md) says, a local freeze is not a public preregistration.
 
-David Cook · 16 November 2026 · Preregistration v1.2 (v1.0 had §9 as open items; v1.1 left five items open)
+David Cook · 16 November 2026 · Preregistration v1.3 (v1.0 had §9 as open items; v1.1 left five items open; v1.2 was the first public version; v1.3 is Amendment 1, Section 10, made 17 November 2026 before any generation)
 
 ## 1. Prospective hold rule
 
@@ -104,8 +104,8 @@ All items below were confirmed by the author on 16 November 2026. Wording and me
      - refuses arm-level output unless the gate passes.
    - **Limits:** the 24 pairs are pilot pairs, already judged by pairwise-v1, and the gate measures agreement with that judge, not ground truth. E4's full validation study (Brier estimand, Section 7) remains separate.
 4. **Steering arm locked to the pilot** (`prereg/steering_lock.json`, unchanged): ideation only, layer −8, **peak strength 0.2**, absolute cap 0.4, and a smooth schedule of 50/100/200 tokens. The per-model targeted vector and nine random directions are pinned by SHA-256, and sampling is T 0.6 (high-temperature arm 1.3 at ideation), top-p 0.95, top-k 20, with thinking off. No pilot ran at a peak of 0.4. The driver checks every fresh unit against the lock and refuses to judge on any mismatch; `--check-hub` checks the vector and random set before generation.
-5. **Task set** (`prereg/tasks_e1_24.json`, unchanged; `tasks_e1_24.jsonl` is the same 24 rows, one per line, for the generator).
-   - **Contents:** 8 practical, 8 analogy and 8 artistic tasks in the pilot schema (`split: confirmation`). With 3 seeds and 4 arms that is 288 chains per model, 216 pairs per model and 864 primary calls.
+5. **Task set** (`prereg/tasks_e1_24.json`; split label corrected by Amendment 1, Section 10; `tasks_e1_24.jsonl` is the same 24 rows, one per line, for the generator).
+   - **Contents:** 8 practical, 8 analogy and 8 artistic tasks in the pilot schema (`split: test`, the label the pinned `confirm` config selects; v1.2 had `confirmation`, see Section 10). With 3 seeds and 4 arms that is 288 chains per model, 216 pairs per model and 864 primary calls.
    - **Disjointness:** subjects were checked against the pilot, smoke and devqual tasks, the unused 31 October confirmation sets, the diagnostics, every qualification fixture and the public repo's task data.
    - **Authorship:** the tasks were written by Claude, the judge's family. The earlier `tasks-v2` set (sha `bcc9497a…`) is not used.
 6. **Generation code and configuration** (`prereg/generation_pin.json`).
@@ -128,14 +128,14 @@ All items below were confirmed by the author on 16 November 2026. Wording and me
 | `judging/scope-v5c/package/prompts/lineage_system_prompt.txt` | `0d8218ecf2ace42abcf3e0216ba9c6829c58dc55bf0897e1c537de24c0e64730` | frozen lineage prompt |
 | `judging/scope-v5c/package/schemas/lineage_schema.json` | `2009d7a7875888c2aa2b71ee9597a57f52f4fdead670192a1e9868150e8afbf6` | frozen lineage schema |
 | `prereg/analyze_e1_pairwise.py` | `7981fa9fdbc3492ac4fc41f4f81c2ae34b882906427d566ba8d4e4f63a811115` | preregistered analysis + E4 gate check |
-| `prereg/run_e1_pairwise.py` | `97e7813e56426c7a0cd21f734eb7215e020b24c66f8cb84ada25b974a543ba51` | E1 primary driver + `--check-hub` |
+| `prereg/run_e1_pairwise.py` | `9707046f08a47c8d147b0fc0cde581a759ca273471f600685684307df9cb2ea9` | E1 primary driver + `--check-hub` |
 | `prereg/run_e1_audit_codex.py` | `967efb9f454b63a661d97c1db53245d9ee0935a15433b4677d68467ba47eb346` | Codex cross-family audit runner |
 | `prereg/run_e1_lineage.py` | `6e750be89232819ef7ed41d042e2605addb7fef9ddd55dd767cdf2c263a94e7c` | scope-v5c lineage runner (verifies pins before any call) |
 | `prereg/e4_calibration.py` | `5757c3d63f49fcfd7d0ea40552744c0a9d185c4574251a141c889eb2e521fbb1` | E4 selection, masked packet, record |
-| `prereg/tasks_e1_24.json` | `bafe147e4cc3dceba64b978f5f2c5c8379d3ece7e14479e951919786488a641c` | E1 task set |
-| `prereg/tasks_e1_24.jsonl` | `d4ff29b2b35fcd8138b7686a53a714a03a97fc87c0a36ec568b15830ee54b549` | same tasks, generator format |
+| `prereg/tasks_e1_24.json` | `1ed8ab1a99c7d1740004003c0d33a99523ba352359a781b041c48dda08b7a240` | E1 task set |
+| `prereg/tasks_e1_24.jsonl` | `a296738662de76992c548af7b305a4b5d5142be5251e15a5a09bf6e6a4a4e978` | same tasks, generator format |
 | `prereg/steering_lock.json` | `2361358bec3d8b2b4ee236f7cda9b6616b67cd2618a59f2c8a749915a65c18b2` | arm C/D and sampling lock |
-| `prereg/generation_pin.json` | `7166991a6d6005d1c8bd7bbe02be5caec2268615928c722819025e93334dec1b` | generation source, tools and expected configs |
+| `prereg/generation_pin.json` | `1e3c4e865491a3fe207b97b1a2614be2b736179c958785c888d0bd68c0690f85` | generation source, tools and expected configs |
 
 **Script checks (16 November 2026, no model calls).**
 - *Analysis:* on the already-seen pilot pairs (`--exploratory`), it reproduces the pilot report's pair-level W/T/L and its 14 hard flips. The exact permutation p matches brute force. On a synthetic 432-pair E1 layout the audit sample is 90 pairs, with 5 distinct tasks in every one of the 18 strata, and it does not depend on input order.
@@ -150,3 +150,16 @@ All items below were confirmed by the author on 16 November 2026. Wording and me
 ### 9.2. Closed items
 
 All items listed as open in v1.1 are closed above: the audit runner (item 2), the lineage runner (Section 6.2 and the table), the E4 gate definition (item 3), and the generation source and configuration (item 6). The public timestamp is the GitHub push of the commit that adds this text to `proposals-refs-prereg-20261116`. Fresh Qwen3-8B or Mistral-7B generation starts only after that push.
+
+## 10. Amendment 1 (17 November 2026, before any generation)
+
+**What changed.** In `prereg/tasks_e1_24.json` and `prereg/tasks_e1_24.jsonl`, the `split` field of all 24 tasks changed from `"confirmation"` to `"test"`. Nothing else in either file changed: ids, families, subjects, descriptions, prompts and quality constraints are byte-identical, and the order is unchanged.
+
+**Why.** The pinned `confirm` config (`generation_pin.json`, `"phase": "test"`, as in the 31 October confirmation sets `tasks-v1`/`tasks-v2`) makes the generator keep only rows whose `split` equals the phase. With `"confirmation"` it found no rows and stopped. The v1.2 checks compared the hub's copy of the task file with the registered file, and never compared the label with the runner's filter, so they missed this.
+
+**When it was found.** On 16 November 2026 at 20:22 EST the first launch from the v1.2 pins (hubs `gpu/qwen3-e1-20261116-202134` and `gpu/mistral-e1-20261116-202147`) passed the controller fixtures and the ML test suite. It then stopped at the plan-only `confirm-plan` step (`ValueError: No rows for declared phase`) with **0 generation calls**, and the Mistral hub never started. No E1 output existed then or at the time of this amendment. Both halted hubs are kept unchanged as the record. The relaunch uses new hubs.
+
+**Effect on the hash chain.** The new task hashes change `generation_pin.json` (which pins them) and `run_e1_pairwise.py` (whose `REGISTERED` pins the tasks and the pin). The table in Section 9.1 shows the v1.3 values. The v1.2 values were `tasks_e1_24.json` `bafe147e…641c`, `tasks_e1_24.jsonl` `d4ff29b2…b549`, `generation_pin.json` `7166991a…ec1b` and `run_e1_pairwise.py` `97e7813e…ba51`. The analysis script, steering lock, audit, lineage and E4 scripts, the frozen instruments, the endpoints and the decision rules are unchanged. The E4 packet is built from pilot pairs only and is unaffected.
+
+**Check before relaunch.** The pinned 1.4.2 `load_rows` and `plan_units`, run on the amended file with the pinned Qwen config, give 24 rows and 288 planned units.
+
