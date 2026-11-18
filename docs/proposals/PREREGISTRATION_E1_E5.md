@@ -4,7 +4,7 @@
 
 > **Status: written 16 November 2026, before any fresh run exists; amended 17 November 2026 (Section 10), still before any generation.** No confirmation or full-run generation has been made for Qwen3-8B or Mistral-7B. Both main hubs completed only `smoke`/`devqual`/`pilot` (`COMPLETE.json`, 1 November 2026). Section 9 records the author's decisions of 16 November 2026 and the artefact hashes; all items are closed. The file is binding from its public push to GitHub (branch `proposals-refs-prereg-20261116`), which is its timestamp, and that push precedes any fresh generation. As [E1](E1.md) says, a local freeze is not a public preregistration.
 
-David Cook · 16 November 2026 · Preregistration v1.3 (v1.0 had §9 as open items; v1.1 left five items open; v1.2 was the first public version; v1.3 is Amendment 1, Section 10, made 17 November 2026 before any generation)
+David Cook · 16 November 2026 · Preregistration v1.3 (v1.0 had §9 as open items; v1.1 left five items open; v1.2 was the first public version; v1.3 is Amendment 1, Section 10, made 17 November 2026 before any generation; v1.4 adds the generation deviation log, Section 11, 18 November 2026, before any judge call)
 
 ## 1. Prospective hold rule
 
@@ -162,4 +162,24 @@ All items listed as open in v1.1 are closed above: the audit runner (item 2), th
 **Effect on the hash chain.** The new task hashes change `generation_pin.json` (which pins them) and `run_e1_pairwise.py` (whose `REGISTERED` pins the tasks and the pin). The table in Section 9.1 shows the v1.3 values. The v1.2 values were `tasks_e1_24.json` `bafe147e…641c`, `tasks_e1_24.jsonl` `d4ff29b2…b549`, `generation_pin.json` `7166991a…ec1b` and `run_e1_pairwise.py` `97e7813e…ba51`. The analysis script, steering lock, audit, lineage and E4 scripts, the frozen instruments, the endpoints and the decision rules are unchanged. The E4 packet is built from pilot pairs only and is unaffected.
 
 **Check before relaunch.** The pinned 1.4.2 `load_rows` and `plan_units`, run on the amended file with the pinned Qwen config, give 24 rows and 288 planned units.
+
+## 11. Deviation log: E1 generation (18 November 2026, before any judge call)
+
+Generation for both models is complete: 288 chains each, 864 generation calls each, under the v1.3 pins. Qwen3-8B ran from 04:58 to 11:07 EST on 17 November 2026 in hub `gpu/qwen3-e1-20261117-045636`, and its post-stage extraction check passed. Mistral-7B ran from 23:49 on 17 November to 04:11 on 18 November in hub `gpu/mistral-e1-20261117-045637`. The preregistered driver's dry run (no judge calls) gives 432 pairs, 0 missing finals, 0 lock or task problems and 0 hold-rule gaps.
+
+**D1. Extraction-check failure on one Mistral chain, accepted unchanged.**
+- *What happened:* the generation stage exited normally. The post-stage extraction check (`check_extraction.py`, pinned) then failed on 1 of 288 Mistral units, so the queue reported failure and wrote no `COMPLETE.json`. That unit is `e1-conf-03__s23__random`, final stage, with failure `lost_members` (7 visible headers, 6 extracted members). Its final answer gives I1–I5 and then three new ideas (I6, I7, I8), where the final stage asks for one. The pinned 1.4.2 extraction records I1–I5 and the first new idea, so I7 and I8 are not extracted as members.
+- *Decision (author, 18 November 2026):* accept the unit unchanged. It is not regenerated, edited or excluded. Regenerating one chain chosen after generation would make the sample depend on the outputs.
+- *Effect on the primary endpoint:* none. The judge sees each chain's full final text, I7 and I8 included, and the unit enters its pairs like any other.
+- *Effect on secondary endpoints:* lineage (Section 6.2) rates extracted final members only, so I7 and I8 are not rated. They are reported as unrated members of this unit.
+- *Records:* unit file sha256 `b7b3538faf2b7c8e66376a11b80c94157d655cb71784baaa3a91cb9bdc7b4ce7`; Mistral `EXTRACTION-CHECK-confirm.json` sha256 `c4adda8c19683ac9bfbb33b3544fb6ce0d11e3d18d3b4ee3a9c41b7aeaf60416`.
+- *How it was examined:* the author's assistant read this one unit's final text to diagnose the failure, after generation for both models was complete and with the analysis script already hashed, as Section 1 allows. The unit ID shows its arm (`random`). No judge call has been made.
+
+**D2. Mistral launch halted by a host-memory guard, then resumed.** This is a procedural deviation; no output was affected.
+- *What happened:* on 17 November at 11:07 EST the controller's pre-launch guard refused to start the `confirm` stage. The host had 5.6 GB of RAM available, below its 6 GiB minimum. This was after the random-set stage, with 0 generation calls.
+- *The hub check:* the confirm stage was refused within 0.1 s of the random set being written, so the wrapper never ran `--check-hub` and it stopped the run, as designed. The check was then run by hand and reported `hub OK`.
+- *Resume:* the stage was resumed at 23:47 with the documented `run_queue.py HUB --from confirm`. That path reuses the hub's qualification and random set. A fresh `--check-hub` run immediately before the resume reported `hub OK` with the results folder empty (`output/E1-HUB-CHECK-resume.json`).
+- *What did not change:* the hub, the config, the random set and every pinned file.
+
+**Observation (not a deviation).** Two Mistral development-stage calls reached the 3,072-token generation cap (`finish_reason = length`): `e1-conf-01__s11__random` and `e1-conf-16__s11__random`. Both chains completed their final stage, and the cap is part of the pinned config. All other generation calls in both models ended at end-of-sequence.
 
